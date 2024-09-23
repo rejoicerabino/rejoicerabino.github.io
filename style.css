@@ -1,14 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; 
+    
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #001A3D; /* Dark blue background */
-    color: beige; /* Beige text */
+    background-color: #001A3D; 
+    color: beige;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: center; /* Center text for all screens */
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    text-align: center;
+    overflow-x: hidden; 
 }
 
 header {
@@ -17,20 +24,20 @@ header {
 }
 
 .welcome {
-    font-family: 'GFS Artemisia', serif; /* Welcoming message font */
-    font-size: 2.5em; /* Default font size */
-    margin: 0; /* Remove margin for better centering */
+    font-family: 'GFS Artemisia', serif; 
+    font-size: 2.5em; 
+    margin: 0; 
 }
 
 footer {
     padding: 20px;
-    background-color: #002147; /* Dark blue */
-    color: beige; /* Beige */
+    background-color: #002147; 
+    color: beige; 
     width: 100%;
 }
 
 main {
-    flex: 1; /* Allows main to take available space */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,43 +46,47 @@ main {
 }
 
 .explore {
-    margin-top: 0; /* Removed margin for higher positioning */
+    margin-top: 0; 
     color: beige;
-    font-size: 1.5em; /* Increased font size for visibility */
+    font-size: 1.5em; 
 }
 
 .button {
-    margin-top: 10px; /* Space below the explore text */
+    max-width: 90%; 
     padding: 15px 30px;
-    background-color: #E0CDA8; /* Light beige */
-    color: #001A3D; /* Dark blue text */
+    background-color: #E0CDA8; 
+    color: #001A3D; 
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    width: fit-content;
+    width: auto; 
     display: inline-block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
-    background-color: #D1B192; /* Slightly darker beige */
+    background-color: #D1B192;
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
 }
 
 @media (max-width: 768px) {
     .welcome {
-        font-size: 2em; /* Slightly smaller font size for tablets */
+        font-size: 2em; 
     }
 }
 
 @media (max-width: 480px) {
     .welcome {
-        font-size: 1.5em; /* Smaller font size for mobile */
+        font-size: 1.5em; 
     }
     .button {
-        width: 90%; /* Full width button on mobile */
-        padding: 15px;
+        padding: 15px; 
         font-size: 0.9em;
     }
 }
