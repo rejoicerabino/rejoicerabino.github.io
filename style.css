@@ -2,7 +2,6 @@
 *::before,
 *::after {
     box-sizing: border-box; 
-    
 }
 
 body {
@@ -10,11 +9,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #001A3D; 
-    color: beige;
+    color: beige; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    text-align: center;
+    text-align: center; 
     overflow-x: hidden; 
 }
 
@@ -25,7 +24,7 @@ header {
 
 .welcome {
     font-family: 'GFS Artemisia', serif; 
-    font-size: 2.5em; 
+    font-size: 40px; 
     margin: 0; 
 }
 
@@ -48,7 +47,7 @@ main {
 .explore {
     margin-top: 0; 
     color: beige;
-    font-size: 1.5em; 
+    font-size: 24px; 
 }
 
 .button {
@@ -58,7 +57,7 @@ main {
     color: #001A3D; 
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 16px; 
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     width: auto; 
@@ -67,7 +66,7 @@ main {
 }
 
 .button:hover {
-    background-color: #D1B192;
+    background-color: #D1B192; 
 }
 
 img {
@@ -77,16 +76,16 @@ img {
 
 @media (max-width: 768px) {
     .welcome {
-        font-size: 2em; 
+        font-size: 32px; 
     }
 }
 
 @media (max-width: 480px) {
     .welcome {
-        font-size: 1.5em; 
+        font-size: 24px; 
     }
     .button {
-        padding: 15px; 
-        font-size: 0.9em;
+        padding: 15px;
+        font-size: 14.4px; 
     }
 }
