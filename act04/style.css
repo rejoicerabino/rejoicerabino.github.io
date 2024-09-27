@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1A1B20;
+    color: #fff;
+}
+
+/* container and header */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #1A1B20;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    margin-right: auto;
+}
+
+/* product name */
+.product-name {
+    background-color: #1A1B20;
+    padding-top: 0px;
+}
+
+.product-name h1 {
+    font-size: 28px; 
+    margin-bottom: 10px; 
+    text-align: left;
+    margin-left: 40px;
+}
+
+/* design video */
+.main-image {
+    background-color: #1A1B20;
+    padding: 10px;
+}
+
+.main-image video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* side content */
+.side-content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 230px;
+    justify-content: flex-start;
+}
+
+.side-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.side-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px; 
+    color: #fff;
+    margin-bottom: 10px; 
+}
+
+.side-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px; 
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.6; 
+    max-width: 400px;
+    text-align: left;
+}
+
+/* feature header */
+.feature1-header, .feature2-header, .feature3-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px; 
+    color: #fff;
+    margin-bottom: 15px; 
+    text-align: center;
+    margin-top: 100px; 
+}
+
+/* feature images  */
+.feature1-image, .feature2-image, .feature3-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 70px;
+    margin-left: auto;
+}
+
+/* feature description */
+.feature1-description, .feature2-description, .feature3-description {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px; 
+    color: #fff;
+    line-height: 1.6;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+/* footer */
+footer {
+    padding: 40px 0; 
+    margin-top: 200px; 
+    background-color: #1A1B20;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .product-name h1 {
+        font-size: 24px; 
+        margin-left: 20px;
+    }
+
+    .side-image {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .side-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .side-header {
+        text-align: center;
+        font-size: 24px; 
+    }
+
+    .side-description {
+        text-align: center;
+        font-size: 16px; 
+    }
+
+    .feature1-image, .feature2-image, .feature3-image {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .feature1-description, .feature2-description, .feature3-description {
+        margin-left: 0;
+        font-size: 16px; 
+        max-width: 90%; /* Updated for responsiveness */
+        padding: 0 10px; /* Added padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 80px;
+    }
+
+    .product-name h1 {
+        font-size: 20px;
+    }
+
+    .side-header, .feature1-header, .feature2-header, .feature3-header {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .side-description, .feature1-description, .feature2-description, .feature3-description {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 90%; /* Ensure it's responsive on smaller screens */
+        padding: 0 5px; /* Added padding for smaller screens */
+    }
+}
