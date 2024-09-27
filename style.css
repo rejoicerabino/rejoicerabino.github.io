@@ -53,20 +53,22 @@ main {
 .button {
     max-width: 90%; 
     padding: 15px 30px;
-    background-color: #E0CDA8; 
-    color: #001A3D; 
+    background-color: #E0CDA8;  
+    color: #001A3D;             
     border: none;
     border-radius: 5px;
     font-size: 16px; 
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;      
     transition: background-color 0.3s, color 0.3s;
     width: auto; 
     display: inline-block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .button:hover {
-    background-color: #D1B192; 
+    background-color: #D1B192;  
 }
 
 img {
@@ -87,5 +89,12 @@ img {
     .button {
         padding: 15px;
         font-size: 14.4px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        padding: 8px 16px;        
+        font-size: 14px;         
     }
 }
