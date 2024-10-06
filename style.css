@@ -50,8 +50,14 @@ main {
     font-size: 24px; 
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+}
+
 .button {
-    max-width: 90%; 
+    max-width: none; 
     padding: 15px 30px;
     background-color: #E0CDA8;  
     color: #001A3D;             
@@ -89,12 +95,5 @@ img {
     .button {
         padding: 15px;
         font-size: 14.4px; 
-    }
-}
-
-@media (max-width: 768px) {
-    .btn {
-        padding: 8px 16px;        
-        font-size: 14px;         
     }
 }
