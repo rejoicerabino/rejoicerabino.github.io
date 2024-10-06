@@ -12,7 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400..700&display=swap" rel="stylesheet">
     <style>
         body {
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        .card-img-top {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
@@ -52,10 +57,9 @@
             Activities</h2>
         <div class="row">
             <!-- card 1 -->
-            <div class="col-lg-4 mb-4 d-flex">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
                 <div class="card d-flex flex-column" style="width: 100%; height: 100%; border: none">
-                    <img src="images/cooking.jpg" class="card-img-top" alt="Highlight 1"
-                        style="height: 300px; object-fit: cover; border-radius: 0;">
+                    <img src="images/cooking.jpg" class="card-img-top" alt="Highlight 1">
                     <div class="card-body d-flex flex-column flex-grow-1">
                         <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Cooking Classes at
                             Fattoria La Vialla</h5>
@@ -70,10 +74,9 @@
             </div>
 
             <!-- card 2 -->
-            <div class="col-lg-4 mb-4 d-flex">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
                 <div class="card d-flex flex-column" style="width: 100%; height: 100%; border: none;">
-                    <img src="images/town.jpg" class="card-img-top" alt="Highlight 2"
-                        style="height: 300px; object-fit: cover; border-radius: 0;">
+                    <img src="images/town.jpg" class="card-img-top" alt="Highlight 2">
                     <div class="card-body d-flex flex-column flex-grow-1">
                         <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Historic Town of Florence
                         </h5>
@@ -91,10 +94,9 @@
             </div>
 
             <!-- card 3 -->
-            <div class="col-lg-4 mb-4 d-flex">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
                 <div class="card d-flex flex-column" style="width: 100%; height: 100%; border: none;">
-                    <img src="images/hike.jpg" class="card-img-top" alt="Highlight 3"
-                        style="height: 300px; object-fit: cover; border-radius: 0;">
+                    <img src="images/hike.jpg" class="card-img-top" alt="Highlight 3">
                     <div class="card-body d-flex flex-column flex-grow-1">
                         <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Hiking in the Apuan Alps
                         </h5>
@@ -116,10 +118,9 @@
             Night Activities</h2>
         <div class="row">
             <!-- card 1 -->
-            <div class="col-lg-4 mb-4 d-flex">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
                 <div class="card d-flex flex-column" style="width: 100%; height: 100%; border: none;">
-                    <img src="images/market.jpg" class="card-img-top" alt="Highlight 1"
-                        style="height: 300px; object-fit: cover; border-radius: 0;">
+                    <img src="images/market.jpg" class="card-img-top" alt="Highlight 1">
                     <div class="card-body d-flex flex-column flex-grow-1">
                         <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Night Markets</h5>
                         <p class="card-text" style="font-family: 'Georgia', serif; text-align: justify;">Tuscany's night
@@ -130,51 +131,48 @@
                             variety of street food options, including traditional Tuscan dishes and international
                             flavors. Visitors can enjoy live music, discover unique souvenirs, and immerse themselves in
                             the lively atmosphere while sampling local wines and cheeses. These markets not only provide
-                            a taste of Tuscany’s culinary delights but also offer a chance to mingle with locals and
-                            experience the region's rich culture under the stars.</p>
+                            a taste of Tuscany's culinary delights but also foster a sense of community and connection
+                            among locals and travelers alike.</p>
                         <div class="mt-auto"></div>
                     </div>
                 </div>
             </div>
 
             <!-- card 2 -->
-            <div class="col-lg-4 mb-4 d-flex">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
                 <div class="card d-flex flex-column" style="width: 100%; height: 100%; border: none;">
-                    <img src="images/hotspring.jpg" class="card-img-top" alt="Highlight 2"
-                        style="height: 300px; object-fit: cover; border-radius: 0;">
+                    <img src="images/wine.jpg" class="card-img-top" alt="Highlight 2">
                     <div class="card-body d-flex flex-column flex-grow-1">
-                        <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Thermal Baths</h5>
-                        <p class="card-text" style="font-family: 'Georgia', serif; text-align: justify;">Thermal baths
-                            in Tuscany offer a rejuvenating escape amidst stunning landscapes. One of the most famous
-                            locations is Saturnia, known for its natural hot springs featuring mineral-rich waters that
-                            cascade into beautiful pools. Visitors can relax in the warm, sulfuric waters while enjoying
-                            the picturesque scenery of the surrounding countryside. Another popular spot is Bagni San
-                            Filippo, where visitors can explore natural thermal pools and unique white travertine
-                            formations. Many thermal spas also offer wellness treatments, including massages and beauty
-                            therapies, allowing guests to indulge in complete relaxation. These thermal baths provide a
-                            perfect blend of nature and wellness, making for a truly revitalizing experience.</p>
+                        <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Wine Tasting Tours</h5>
+                        <p class="card-text" style="font-family: 'Georgia', serif; text-align: justify;">Wine tasting
+                            tours in Tuscany are a perfect way to explore the region's renowned vineyards and savor its
+                            exquisite wines. Many tours offer visits to picturesque wineries, where guests can learn about
+                            the winemaking process, enjoy guided tastings, and indulge in gourmet food pairings. Popular
+                            wine regions like Chianti, Montalcino, and Montepulciano are famous for their beautiful
+                            landscapes and exceptional wines, including Chianti Classico and Brunello di Montalcino.
+                            Whether you're a wine connoisseur or simply looking for a delightful experience, a wine
+                            tasting tour promises to be an unforgettable journey through Tuscany's rich viticultural
+                            heritage.</p>
                         <div class="mt-auto"></div>
                     </div>
                 </div>
             </div>
 
             <!-- card 3 -->
-            <div class="col-lg-4 mb-4 d-flex">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex">
                 <div class="card d-flex flex-column" style="width: 100%; height: 100%; border: none;">
-                    <img src="images/rfbar.jpg" class="card-img-top" alt="Highlight 3"
-                        style="height: 300px; object-fit: cover; border-radius: 0;">
+                    <img src="images/stargaze.jpg" class="card-img-top" alt="Highlight 3">
                     <div class="card-body d-flex flex-column flex-grow-1">
-                        <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Rooftop Bars</h5>
-                        <p class="card-text" style="font-family: 'Georgia', serif; text-align: justify;">Several
-                            stunning rooftop bars in Tuscany offer amazing views and a lively ambiance. A well-known
-                            option is La Terrazza in Florence, situated atop the Hotel Continentale, where guests can
-                            sip on signature cocktails like the "Florence Spritz" while enjoying tasty Tuscan tapas.
-                            Another favorite is Sesto on Arno, also in Florence, which features breathtaking city
-                            vistas, complemented by an excellent wine selection and gourmet small plates. These stylish
-                            venues allow visitors to relax while listening to live music, socializing with locals and
-                            fellow travelers, or simply taking in the beautiful sunsets over the Tuscan landscape.
-                            Whether you’re eager to enjoy a refreshing drink or sample local cuisine, these rooftop bars
-                            offer a perfect setting for a memorable evening.</p>
+                        <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;">Stargazing in the Countryside
+                        </h5>
+                        <p class="card-text" style="font-family: 'Georgia', serif; text-align: justify;">Away from the
+                            bright lights of the city, Tuscany's countryside offers breathtaking opportunities for
+                            stargazing. With its clear skies and minimal light pollution, visitors can experience a
+                            mesmerizing view of the stars, planets, and constellations. Many rural areas offer guided
+                            stargazing tours, complete with telescopes and knowledgeable guides who can share insights
+                            about the cosmos. Whether lying on a blanket under the stars or participating in an organized
+                            tour, stargazing in Tuscany is a peaceful and awe-inspiring experience that allows you to
+                            connect with the beauty of the universe.</p>
                         <div class="mt-auto"></div>
                     </div>
                 </div>
@@ -182,12 +180,11 @@
         </div>
     </div>
 
-    <footer class="text-center py-3 mt-5" style="background-color: #f1a120; color: white;">
-        <p>&copy; 2024 Travel Guides to Tuscany. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-OgVRvuATP8+ORbQW6M4An+U8g8M9Bt5x9V+7G5K4x4hIcY6AfZOz1A+mA4b5H+yD"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-6qQ9UiwEmE7eIu5+E4qA0v+QKz8iHl3/8Z8/QP0+5+7eq1zQtM7Q6i+SKPOekq2+L"
         crossorigin="anonymous"></script>
 </body>
 
