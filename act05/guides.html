@@ -12,16 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400..700&display=swap" rel="stylesheet">
     <style>
         body {
-            overflow-x: hidden; 
-        }
-        @media (max-width: 767px) {
-            .navbar-brand {
-                font-size: 5vw; 
-            }
-
-            .nav-link {
-                font-size: 3.5vw; 
-            }
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -30,10 +21,14 @@
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg" style="background-color: #f1a120;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="tuscany.html" style="font-family: 'Geist', sans-serif; font-size: 3vw; font-weight: bold;">Tuscany: Where Art, Wine, and Nature Unite</a>
+            <a class="navbar-brand" href="tuscany.html"
+                style="font-family: 'Geist', sans-serif; font-size: 3vw; font-weight: bold;">Tuscany: Where Art, Wine,
+                and Nature Unite</a>
             <div class="d-flex">
-                <a class="nav-link" href="tuscany.html" style="font-family: 'Geist', sans-serif; font-size: 1.5vw; padding-right: 1rem;">Home</a>
-                <a class="nav-link" href="guides.html" style="font-family: 'Geist', sans-serif; font-size: 1.5vw;">Guide</a>
+                <a class="nav-link" href="tuscany.html"
+                    style="font-family: 'Geist', sans-serif; font-size: 1.5vw; padding-right: 1rem;">Home</a>
+                <a class="nav-link" href="guides.html"
+                    style="font-family: 'Geist', sans-serif; font-size: 1.5vw;">Guide</a>
             </div>
         </div>
     </nav>
@@ -41,17 +36,20 @@
     <!-- day activities card -->
     <div class="container-fluid p-0">
         <div class="row">
-            <img src="images/tuscany.jpg" class="img-fluid mb-5" alt="Tuscany">
-            <h1 class="text-center"
-                style="font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: bold; margin-bottom: 30px;">
-                Discover Tuscany Day and Night</h1>
-            <p class="mx-auto"
-                style="font-size: 1.2rem; line-height: 1.6; text-align: center; font-family: 'Georgia', serif; font-style: italic; margin-bottom: 35px; max-width: 500px;">
-                Wander through Tuscany’s enchanting countryside by day, then revel in the charm of its candlelit streets
-                and lively nightlife as the stars come out.
-            </p>
+            <div class="col-12">
+                <img src="images/tuscany.jpg" class="img-fluid mb-5" alt="Tuscany">
+            </div>
+            <div class="col-12 text-center mt-3 mb-4">
+                <h1 class="display-4" style="font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                    Discover Tuscany Day and Night
+                </h1>
+                <p class="lead" style="font-family: 'Georgia', serif; font-style: italic; max-width: 500px; margin: auto;">
+                    Wander through Tuscany’s enchanting countryside by day, then revel in the charm of its candlelit streets
+                    and lively nightlife as the stars come out.
+                </p>
+            </div>
         </div>
-    </div>
+    </div>    
 
     <div class="container mt-lg-5">
         <h2 style="font-size: 1.5rem; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-weight: bold;">
@@ -117,9 +115,10 @@
         </div>
 
         <!-- night activities card -->
-        <h2
-            style="font-size: 1.5rem; margin-top: 40px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-weight: bold;">
-            Night Activities</h2>
+        <h2 class="mt-4 mb-3" style="font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+            Night Activities
+        </h2>
+
         <div class="row">
             <!-- card 1 -->
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
