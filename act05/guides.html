@@ -14,22 +14,34 @@
         body {
             overflow-x: hidden;
         }
+
+        .navbar {
+            font-family: 'Geist', sans-serif;
+        }
+
+        .nav-link {
+            font-size: 1.5vw;
+        }
+
+        .navbar-brand {
+            font-size: 3vw;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #f1a120;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="tuscany.html"
-                style="font-family: 'Geist', sans-serif; font-size: 3vw; font-weight: bold;">Tuscany: Where Art, Wine,
-                and Nature Unite</a>
-            <div class="d-flex">
-                <a class="nav-link" href="tuscany.html"
-                    style="font-family: 'Geist', sans-serif; font-size: 1.5vw; padding-right: 1rem;">Home</a>
-                <a class="nav-link" href="guides.html"
-                    style="font-family: 'Geist', sans-serif; font-size: 1.5vw;">Guide</a>
-            </div>
+    <nav class="navbar"
+        style="background-color: #f1a120; display: flex; justify-content: space-between; align-items: center; padding: 10px; width: 100%;">
+        <a class="navbar-brand" href="tuscany.html"
+            style="font-family: 'Geist', sans-serif; font-size: 3vw; font-weight: bold; margin-left: 10px;">Tuscany:
+            Where Art, Wine, and Nature Unite</a>
+        <div style="display: flex; align-items: center;">
+            <a class="nav-link" href="tuscany.html"
+                style="font-family: 'Geist', sans-serif; font-size: 1.5vw; padding: 0 15px; margin: 0;">Home</a>
+            <a class="nav-link" href="guides.html"
+                style="font-family: 'Geist', sans-serif; font-size: 1.5vw; padding: 0 15px; margin: 0;">Guide</a>
         </div>
     </nav>
 
@@ -43,13 +55,15 @@
                 <h1 class="display-4" style="font-family: 'Montserrat', sans-serif; font-weight: bold;">
                     Discover Tuscany Day and Night
                 </h1>
-                <p class="lead" style="font-family: 'Georgia', serif; font-style: italic; max-width: 500px; margin: auto;">
-                    Wander through Tuscany’s enchanting countryside by day, then revel in the charm of its candlelit streets
+                <p class="lead"
+                    style="font-family: 'Georgia', serif; font-style: italic; max-width: 500px; margin: auto;">
+                    Wander through Tuscany’s enchanting countryside by day, then revel in the charm of its candlelit
+                    streets
                     and lively nightlife as the stars come out.
                 </p>
             </div>
         </div>
-    </div>    
+    </div>
 
     <div class="container mt-lg-5">
         <h2 style="font-size: 1.5rem; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-weight: bold;">
@@ -186,13 +200,16 @@
             </div>
         </div>
     </div>
-
-    <footer class="text-center py-3 mt-5" style="background-color: #f1a120a9; color: white;">
+    
+    <footer class="text-center py-3 mt-5" style="background-color:#f1a120a9; color: white; font-family: 'Montserrat', sans-serif;">
         <p>&copy; 2024 Travel Guides to Tuscany. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gyb6gIxO75qxH7ghMTmgFqUsfYz+F91QFQNYxZfH9QWlC0//cP"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-JFUIg96a2j0SUu4xQZOVGdSa+6c/2Q1FhC3A+nb/ccNTA7+G6yGVcWZ47nPCv5Fj"
         crossorigin="anonymous"></script>
 </body>
 
