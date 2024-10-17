@@ -1,28 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejoice's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=GFS+Artemisia&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://use.typekit.net/waq3sfu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+
+<body
+    style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-image: url('images/bg.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: #333; display: flex; flex-direction: column; min-height: 100vh; text-align: center; overflow-x: hidden;">
     <header>
-        <p class="welcome">Welcome to my portfolio, I'm Rejoice!</p>
+        <h1 class="display-4 fade-in"
+            style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-top: 40px; margin-bottom: 40px;">
+            Welcome to my Portfolio</h1>
     </header>
 
     <main>
-        <p class="explore">Explore my projects below!</p>
-        <div class="button-container">
-            <a id="project1-btn" class="button" href="act04/product.html">Project 01</a>
-            <a id="project2-btn" class="button" href="act05/tuscany.html">Project 02</a>
-            <a id="project2-btn" class="button" href="act06/gfo.html">Project 03</a>
+        <div class="container-fluid fade-in" style="flex: 1; padding: 50px;">
+            <div class="row">
+                <div class="col-md-12 projects"
+                    style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+                    <p class="h4 fade-in"
+                        style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-bottom: 20px;">
+                        Explore my Projects Below!</p>
+                    <div class="button-container" style="display: flex; flex-direction: column; gap: 15px;">
+                        <a id="project1-btn" class="button fade-in" href="act04/product.html"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                            01</a>
+                        <a id="project2-btn" class="button fade-in" href="act05/tuscany.html"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                            02</a>
+                        <a id="project3-btn" class="button fade-in" href="act06/gfo.html"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                            03</a>
+                    </div>
+                </div>
+
+                <div class="col-md-12 about-me"
+                    style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: 200px;">
+                    <img src="images/pfp.jpg" alt="Rejoice's Photo"
+                        style="border-radius: 100px; width: 200px; height: auto; margin-bottom: 20px;" class="fade-in">
+                    <div class="bio">
+                        <p class="h4 fade-in"
+                            style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin: 10px 0;">
+                            About me</p>
+                        <p style="font-family: 'Lato', sans-serif; text-align: center; max-width: 1000px;">I’m Rejoice
+                            M. Rabino, an IT student with a strong
+                            interest in technology, coding, and problem-solving. Currently pursuing my degree in
+                            Information
+                            Technology at Polytechnic University of the Philippines. I enjoy working on projects that
+                            allow
+                            me to apply my technical and creativity skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer>
-        Polytechnic University of the Philippines
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center"
+            style="border-bottom: 2px solid #5B3A29; padding-bottom: 3px; margin-bottom: 3px; width: calc(100% - 80px); margin-left: 40px; margin-right: 40px;">
+        </ul>
+        <p class="text-center text-body-secondary">Polytechnic University of the Philippines</p>
     </footer>
+
+    <style>
+        /* Fade-in animation for text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply fade-in animation with 2 seconds duration */
+        .fade-in {
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .button {
+            transition: background-color 0.3s ease;
+            /* Specific for buttons */
+        }
+
+        .button:hover {
+            background-color: #555;
+            /* Change background color on hover */
+        }
+
+        .about-me img {
+            transition: transform 0.3s ease;
+            /* Image transition */
+        }
+
+        .about-me img:hover {
+            transform: scale(1.1);
+            /* Scale up the image on hover */
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 20px;
+            }
+
+            .projects {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .welcome {
+                font-size: 30px;
+            }
+
+            .about-me img {
+                width: 150px;
+            }
+
+            .button {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome {
+                font-size: 24px;
+            }
+
+            .button {
+                font-size: 14px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
 </body>
+
 </html>
