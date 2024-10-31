@@ -29,19 +29,23 @@
                         Explore my Projects Below!</p>
                     <div class="button-container" style="display: flex; flex-direction: column; gap: 15px;">
                         <a id="project1-btn" class="button fade-in" href="act04/product.html"
-                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                            onclick="changeColor(event, this)"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
                             01
                         </a>
                         <a id="project2-btn" class="button fade-in" href="act05/tuscany.html"
-                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                            onclick="changeColor(event, this)"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
                             02
                         </a>
                         <a id="project3-btn" class="button fade-in" href="act06/gfo.html"
-                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                            onclick="changeColor(event, this)"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
                             03
                         </a>
-                        <a id="project3-btn" class="button fade-in" href="act07/ghibli.html"
-                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #333; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
+                        <a id="project4-btn" class="button fade-in" href="act07/ghibli.html"
+                            onclick="changeColor(event, this)"
+                            style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 200px;">Project
                             04
                         </a>
 
@@ -78,8 +82,18 @@
         <p class="text-center text-body-secondary">Polytechnic University of the Philippines</p>
     </footer>
 
+    <script>
+        function changeColor(event, element) {
+            event.preventDefault();
+            element.style.backgroundColor = "#6F5B3E";
+
+            setTimeout(() => {
+                window.location.href = element.href;
+            }, 150);
+        }
+    </script>
+
     <style>
-        /* Fade-in animation for text */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -92,29 +106,28 @@
             }
         }
 
-        /* Apply fade-in animation with 2 seconds duration */
         .fade-in {
             animation: fadeIn 2s ease forwards;
         }
 
         .button {
             transition: background-color 0.3s ease;
-            /* Specific for buttons */
+
         }
 
         .button:hover {
             background-color: #555;
-            /* Change background color on hover */
+
         }
 
         .about-me img {
             transition: transform 0.3s ease;
-            /* Image transition */
+
         }
 
         .about-me img:hover {
             transform: scale(1.1);
-            /* Scale up the image on hover */
+
         }
 
         @media (max-width: 1024px) {
