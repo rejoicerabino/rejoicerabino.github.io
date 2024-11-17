@@ -70,7 +70,6 @@
 	height: 70vh;
 }
 
-/* Responsive Layers */
 @media (max-width: 1300px) {
 	.keyart,
 	.keyart_layer {
