@@ -181,19 +181,7 @@
 	}
 }
 
-@media only screen and (max-device-width: 390px) and (orientation: portrait) {
-    .keyart,
-    .keyart_layer {
-        height: 140px; 
-    }
-
-    #keyart-0, #keyart-1, #keyart-2, #keyart-3, #keyart-4  {
-        height: 20vh; 
-    }
-}
-
-
-/* @media only screen and (max-device-width: 380px) and (orientation: portrait) {
+@media only screen and (max-device-width: 380px) and (orientation: portrait) {
     .keyart,
 	.keyart_layer {
 		height: 110px;
@@ -202,7 +190,7 @@
 	#keyart-0, #keyart-1, #keyart-2, #keyart-3, #keyart-4  {
 		height: 17vh;
 	}
-} */
+}
 
 /* Landscape Responsive Layers */
 @media only screen and (max-device-width: 1380px) and (orientation: landscape) {
