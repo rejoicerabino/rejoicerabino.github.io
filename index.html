@@ -10,29 +10,112 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" href="images/hpIcon.png" type="image/x-icon">
+
+    <style>
+        .card-container {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            list-style: none;
+            width: 300px;
+            height: 400px;
+            aspect-ratio: 3 / 4;
+            padding-bottom: 33.33vw;
+            transition: 0.3s ease;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .card-background {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.9) saturate(1) contrast(1);
+            transition: 0.3s ease;
+        }
+
+        .card:hover .card-background {
+            transform: scale(1.15);
+            background-size: 120%;
+        }
+
+        .card-container:hover .card:not(:hover) {
+            transform: scale(0.9);
+        }
+
+        .card-container:hover>.card:not(:hover) .card-background,
+        .card-container:hover>.card:not(:hover) .card-category {
+            filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+        }
+
+        .content {
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 25px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .card-category {
+            color: antiquewhite;
+            font-size: 2.5rem;
+            font-weight: 200;
+            font-style: italic;
+            margin-left: 1vw;
+            text-transform: uppercase;
+        }
+
+        .card-heading {
+            color: antiquewhite;
+            font-size: 3rem;
+            line-height: 1;
+            text-shadow: 2px 2px 20px rgba (0, 0, 0, 0.2);
+        }
+    </style>
+
 </head>
 
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-image: url('images/bg.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: #333; display: flex; flex-direction: column; min-height: 100vh; text-align: center; overflow-x: hidden;">
+<body
+    style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-image: url('images/bg.png'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; color: #333; display: flex; flex-direction: column; min-height: 100vh; text-align: center; overflow-x: hidden;">
 
     <header>
-        <h1 class="display-4 fade-in" style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-top: 40px;">
+        <h1 class="display-4 fade-in"
+            style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-top: 40px;">
             Welcome to my Portfolio
         </h1>
     </header>
 
-    <div class="container fade-in" style="min-height: 80vh; display: flex; justify-content: center; align-items: center;">
-        <div class="row about-me mt-0 align-items-center justify-content-center" style="text-align: left; width: 100%; max-width: 1200px;">
+    <div class="container fade-in"
+        style="min-height: 80vh; display: flex; justify-content: center; align-items: center;">
+        <div class="row about-me mt-0 align-items-center justify-content-center"
+            style="text-align: left; width: 100%; max-width: 1200px;">
             <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                <img src="images/pfp.jpg" alt="Rejoice's Photo" class="fade-in img-fluid" style="border-radius: 100%; width: 100%; max-width: 300px; height: auto; margin-bottom: 20px;">
+                <img src="images/pfp.jpg" alt="Rejoice's Photo" class="fade-in img-fluid"
+                    style="border-radius: 100%; width: 100%; max-width: 300px; height: auto; margin-bottom: 20px;">
             </div>
             <div class="col-12 col-md-8 d-flex flex-column justify-content-center text-center">
-                <p class="h1 fade-in" style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin: 10px 0; align-items: center">
+                <p class="h1 fade-in"
+                    style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin: 10px 0; align-items: center">
                     Rejoice M. Rabino
                 </p>
-                <p class="h5 fade-in" style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin: 10px 0; align-items: center;">
+                <p class="h5 fade-in"
+                    style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin: 10px 0; align-items: center;">
                     A Bit About Me
                 </p>
-                <p class="h6" style="font-family: 'Lato', sans-serif; text-align: justify; max-width: 500px; margin: 0 auto;">
+                <p class="h5"
+                    style="font-family: 'Lato', sans-serif; text-align: justify; max-width: 500px; margin: 0 auto;">
                     I'm an IT student with a strong interest in technology, coding, and problem-solving. Currently
                     pursuing my degree in Information Technology at Polytechnic University of the Philippines. I
                     enjoy working on projects that allow me to apply my technical and creativity skills.
@@ -41,39 +124,99 @@
         </div>
     </div>
     <div class="container-fluid fade-in" style="flex: 1; padding: 50px;">
-        <div class="row">
-            <div class="col-md-12 projects" style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
-                <p class="h4 fade-in" style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-bottom: 20px;">
-                    Explore my Projects Below!
-                </p>
-                <div class="row">
-                    <div class="col-md-6 mt-5">
-                      <div class="button-container" style="display: flex; flex-direction: column; gap: 50px;">
-                        <a id="project1-btn" class="button fade-in" href="act04/product.html" onclick="changeColor(event, this)" style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 100%;">Project 01</a>
-                        <a id="project2-btn" class="button fade-in" href="act05/tuscany.html" onclick="changeColor(event, this)" style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 100%;">Project 02</a>
-                        <a id="project3-btn" class="button fade-in" href="act06/gfo.html" onclick="changeColor(event, this)" style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 100%;">Project 03</a>
-                        <a id="project4-btn" class="button fade-in" href="act07/ghibli.html" onclick="changeColor(event, this)" style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 100%;">Project 04</a>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-5">
-                    <div class="button-container" style="display: flex; flex-direction: column; gap: 50px;">
-                      <a id="m01-btn" class="button fade-in" href="m01/svt.html" onclick="changeColor(event, this)" style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 100%; display: flex; align-items: center; justify-content: center; white-space: nowrap;">Midterm Part 1</a>
-                      <a id="m02-btn" class="button fade-in" href="m02/EZ-Parallax-master/EZ-Parallax-master/banner.html" onclick="changeColor(event, this)" style="font-family: 'Poppins', sans-serif; padding: 15px 30px; background-color: #C4AE78; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; width: 100%; display: flex; align-items: center; justify-content: center; white-space: nowrap;">Midterm Part 2</a>
-
-                    </div>
-                </div>
+        <div class="col-md-12 projects">
+            <p class="h4 fade-in"
+                style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-bottom: 20px;">
+                Explore my Projects Below!
+            </p>
+        </div>
+    </div>
+    <div class="card-container col-lg-6 col-md-12 col-sm-12">
+        <a href="act04/product.html" class="card">
+            <div class="card-background" style="background-image: url('images/p1.jpg');"></div>
+            <div class="content">
+                <p class="card-category">PROJECT 01</p>
+                <h2 class="card-heading">Samsung</h2>
             </div>
+        </a>
+        <a href="act05/tuscany.html" class="card">
+            <div class="card-background" style="background-image: url('images/p2.jpg');"></div>
+            <div class="content">
+                <p class="card-category">PROJECT 02</p>
+                <h2 class="card-heading">Tuscany, Italy</h2>
+            </div>
+        </a>
+        <a href="act06/gfo.html" class="card">
+            <div class="card-background" style="background-image: url('images/p3.jpg');"></div>
+            <div class="content">
+                <p class="card-category">PROJECT 03</p>
+                <h2 class="card-heading">Goodfilms Only</h2>
+            </div>
+        </a>
+        <a href="act07/ghibli.html" class="card">
+            <div class="card-background" style="background-image: url('images/p4.jpg');"></div>
+            <div class="content">
+                <p class="card-category">PROJECT 04</p>
+                <h2 class="card-heading">Studio Ghibli</h2>
+            </div>
+        </a>
+        <a href="m01/svt.html" class="card">
+            <div class="card-background" style="background-image: url('images/m01.jpg');"></div>
+            <div class="content">
+                <p class="card-category">MIDTERM 01</p>
+                <h2 class="card-heading">Seventeen</h2>
+            </div>
+        </a>
+        <a href="m02/EZ-Parallax-master/EZ-Parallax-master/banner.html" class="card">
+            <div class="card-background" style="background-image: url('images/m02.jpg');"></div>
+            <div class="content">
+                <p class="card-category">MIDTERM 02</p>
+                <h2 class="card-heading">EXO</h2>
+            </div>
+        </a>
+    </div>
+    <div class="container-fluid fade-in" style="flex: 1; padding: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="h4 fade-in"
+                    style="font-family: 'Bricolage-grotesque', sans-serif; font-weight: bold; color: #333; margin-bottom: 20px;">
+                    Hobby
+                </p>
+                <p class="h5"
+                    style="font-family: 'Lato', sans-serif; text-align: justify; max-width: 1000px; margin: 0 auto;">
+                    I have a passion for photography, though I’m not a professional photographer. For me, it’s all
+                    about
+                    capturing special moments, experimenting with angles, and playing around with light and
+                    composition
+                    to create something unique.
+                    With each click, a story can be told—a fleeting smile, the dance of sunlight, the quiet beauty
+                    of
+                    the ordinary.
+
+                    Photography is my creative outlet. It is how I express myself and see the world in new ways. I
+                    love
+                    the process of learning and improving as I go. With every shot, I discover new perspectives.
+                    You can visit my ig profile for more of my captured moments.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid fade-in" style="flex: 1; padding: 50px;">
+        <div class="row py-3">
+            <div class="sk-instagram-feed" data-embed-id="25490029"></div>
         </div>
     </div>
 
     <footer class="py-3 my-4">
-        <ul class="nav justify-content-center" style="border-bottom: 2px solid #5B3A29; padding-bottom: 3px; margin-bottom: 3px; width: calc(100% - 80px); margin-left: 40px; margin-right: 40px;">
+        <ul class="nav justify-content-center"
+            style="border-bottom: 2px solid #5B3A29; padding-bottom: 3px; margin-bottom: 3px; width: calc(100% - 80px); margin-left: 40px; margin-right: 40px;">
         </ul>
         <p class="text-center text-body-secondary">Polytechnic University of the Philippines</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
     <script>
         function changeColor(event, element) {
             event.preventDefault();
