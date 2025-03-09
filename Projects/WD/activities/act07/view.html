@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Details</title>
+    <link href="https://fonts.cdnfonts.com/css/ghibli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="images/ghibliIcon.png" type="image/png">
+    <style>
+        body {
+            background-color: #F2E5BF;
+        }
+
+        .navbar {
+            background-color: #322C2B;
+        }
+
+        .navbar-brand img {
+            width: 150px;
+            height: auto;
+            max-width: 100%;
+            margin-right: 20px;
+        }
+
+        .film-details {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-theme {
+            background-color: #F2E5BF;
+            color: #FFFFFF;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            border-radius: 10px 0 0 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .btn {
+            background-color: #A26736;
+            color: #FFFFFF;
+            border: none;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .btn-clicked {
+            background-color: #54473F;
+        }
+
+        .btn:hover {
+            background-color: #54473F;
+        }
+
+        .title {
+            font-family: 'Ghibli', sans-serif;
+            font-weight: bold;
+        }
+
+        .info {
+            font-family: 'Inria Serif', serif;
+        }
+
+        .label {
+            font-family: 'Ghibli', sans-serif;
+            font-weight: bold
+        }
+
+        .description {
+            font-family: 'Inria Serif', serif;
+        }
+
+        .runtime {
+            font-family: 'Inria Serif', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/ghiblistud.png" alt="Ghibli Studio Logo">
+            </a>
+        </div>
+    </nav>
+    <div class="container film-details">
+        <div id="filmCard" class="card card-theme mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img id="img" src="" class="img-fluid" alt="Film Image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 id="title" class="title card-title"></h5>
+                        <p id="description" class="description card-text"></p>
+                        <p><span class="label">Release Date:</span> <span class="info" id="releaseDate"></span></p>
+                        <p><span class="label">Director:</span> <span class="info" id="director"></span></p>
+                        <p><span class="label">Producer:</span> <span class="info" id="producer"></span></p>
+                        <p>
+                            <span class="label">Runing Time:</span>
+                            <span id="runtime" style="font-family: 'Inria Serif', serif;"></span>
+                            <span style="font-family: 'Inria Serif', serif;">minutes</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn" type="button" onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <script>
+        var title = document.getElementById("title");
+        var img = document.getElementById("img");
+        var description = document.getElementById("description");
+        var releaseDate = document.getElementById("releaseDate");
+        var director = document.getElementById("director");
+        var producer = document.getElementById("producer");
+        var runtime = document.getElementById("runtime");
+        var filmCard = document.getElementById("filmCard");
+
+        var colorPalette = {
+            "Spirited Away": "#D4B69B",
+            "My Neighbor Totoro": "#92C5C2",
+            "Princess Mononoke": "#A8B9D4",
+            "Howl's Moving Castle": "#D6A80D",
+            "Kiki's Delivery Service": "#8B2F2E",
+            "Ponyo": "#FF99B0",
+            "Nausicaä of the Valley of the Wind": "#3E7070",
+            "Castle in the Sky": "#9FB3D3",
+            "Grave of the Fireflies": "#BFAE3A",
+            "Only Yesterday": "#AFAF4C",
+            "Porco Rosso": "#A71A31",
+            "Ocean Waves": "#2D3B63",
+            "Pom Poko": "#5B7A5A",
+            "Whisper of the Heart": "#C29BC8",
+            "My Neighbors the Yamadas": "#C0B3B3",
+            "The Cat Returns": "#8C4F7D",
+            "Tales from Earthsea": "#4E77A3",
+            "Arrietty": "#7A4C24",
+            "From Up on Poppy Hill": "#FFCBAF",
+            "The Wind Rises": "#018dc0",
+            "The Tale of the Princess Kaguya": "#F0A8D0",
+            "When Marnie Was There": "#C1B0A8",
+            "The Red Turtle": "#861F30",
+            "Earwig and the Witch": "#D7A600",
+            "The Boy and the Heron": "#5B6A78"
+        };
+
+        const loadFilmsDetails = async (filmId) => {
+            const response = await fetch('https://ghibliapi.dev/films/' + filmId);
+            const film = await response.json();
+
+            title.innerHTML = film.title;
+            img.src = film.image;
+            description.innerText = film.description;
+            releaseDate.innerText = film.release_date;
+            director.innerText = film.director;
+            producer.innerText = film.producer;
+            runtime.innerText = film.running_time;
+
+            var cardColor = colorPalette[film.title] || "#FFFFFF";
+            filmCard.style.backgroundColor = cardColor;
+        };
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        if (urlParams.has('id')) {
+            loadFilmsDetails(urlParams.get('id'));
+        } else {
+            title.innerText = "Film not found"
+        }
+
+        function goBack() {
+            const button = document.querySelector('.btn');
+            button.classList.add('btn-clicked');
+
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = '/';
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <footer class=" mt-5 py-3 my-4">
+        <ul class="nav justify-content-center"
+            style="border-bottom: 2px solid #5B3A29; padding-bottom: 3px; margin-bottom: 3px; width: calc(100% - 80px); margin-left: 40px; margin-right: 40px;">
+            <li class="nav-item">
+                <span class="nav-link px-2 text-body-secondary">©rejoicerabino</span>
+            </li>
+        </ul>
+        <p class="text-center text-body-secondary">Polytechnic University of the Philippines</p>
+    </footer>
+</body>
+
+</html>

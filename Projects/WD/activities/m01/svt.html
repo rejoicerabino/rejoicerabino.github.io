@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seventeen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.cdnfonts.com/css/gloock-2" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/svticon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    .iframe-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      position: relative;
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .navbar-overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      background-color: transparent;
+    }
+
+    .background-container {
+      background-image: url(assets/svtbg.png);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      aspect-ratio: 16/9;
+    }
+
+    .spotify {
+      width: 90vw;
+      height: 90vw;
+      max-width: 80vh;
+      max-height: 80vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      aspect-ratio: 1.77;
+    }
+
+    .card {
+      background-color: #D8D2C2;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-header {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #E8751A;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #bdc3c7;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .spotify {
+        width: 90vw;
+        height: 90vw;
+        max-width: 90vh;
+        max-height: 90vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-overlay">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/svtLogo.png" alt="Logo" width="150" height="70" class="d-inline-block align-text-top">
+        </a>
+      </div>
+    </nav>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <video class="d-block w-100" autoplay muted loop>
+            <source src="assets/svt.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/svt.png" class="d-block w-100" alt="1">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/3.png" class="d-block w-100" alt="2">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/4.png" class="d-block w-100" alt="3">
+        </div>
+        <div class="carousel-item">
+          <img src="assets/5.png" class="d-block w-100" alt="4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background-color: #E8751A; padding: 20px;">
+    <div class="card mb-3 animate__animated animate__fadeIn animate__delay-2s	2s "
+      style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #D8D2C2; overflow: hidden;">
+      <img src="assets/svtgroup.png" class="card-img-top animate__animated animate__fadeIn animate__delay-2s 2s"
+        alt="SVT" style="width: 100%; height: auto; border-bottom: 1px solid #ddd;">
+      <div class="card-body" style="padding: 15px; color: #333;">
+        <h5 class="card-title animate__animated animate__fadeInUp animate__delay-5s	5s"
+          style="font-size: 1.5rem; font-family: 'Gloock', sans-serif; font-weight: 600; text-align: center; margin-bottom: 10px;">Seventeen
+        </h5>
+        <p class="card-text animate__animated animate__fadeInUp animate__delay-5s	5s"
+          style="font-size: 1rem; font-size: 'Lato' sans-serif; line-height: 1.6; color: #555;">
+          SEVENTEEN is a huge idol group, with 13 members and 3 sub-units forming one team. By implementing a pre-debut
+          system, SEVENTEEN’s training and debut preparation has been made open to the public through differentiated
+          promotions such as live broadcasts. In May 2015, the members finally took their first step in the Korean music
+          industry with their first mini album, ’17 CARAT’, which allowed them to rise as super rookies upon debut. The
+          3 different sub-units Hip-hop Team, Vocal Team and Performance Team in the group also actively participated
+          in album production. In addition, after climbing from locally known super rookies, to ‘self-production idols’
+          to ‘chyung-ryang-dols’ since their debut, SEVENTEEN has now grown into an internationally recognized K-Pop
+          group with signature music and performances.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Official Teaser -->
+  <div class="container-fluid" style="background-color: #D8D2C2;">
+    <div class="row mt-0">
+      <div class="col">
+        <h1 class="display-4 mb-4"
+          style="font-family: 'Gloock', sans-serif; text-align: center; color: #FA812F; margin-top: 50px;">Spill the
+          Feels</h1>
+        <p class="h5"
+          style="font-family: 'Gloock', sans-serif; color: #FA812F; text-align: center; margin-top: 30px; margin-bottom: 40px;">
+          12th Mini Album</p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="h5"
+        style="font-family: 'Gloock', sans-serif; text-align: center; margin-top: 30px; margin-bottom: 0px;">Videos</p>
+      <div class="col mt-0">
+        <div class="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/uy3JU-dqVZA?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&showinfo=0&disablekb=1&loop=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Official Music Video -->
+    <div class="row mt-0">
+      <div class="col">
+        <div class="iframe-container">
+          <iframe
+            src="https://www.youtube.com/embed/JjvX09nG2F0?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&showinfo=0&disablekb=1&loop=1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <h1 class="display-5 mb-4 animate__zoomIn animate__delay-2s "
+        style="font-family: 'Gloock', sans-serif; text-align: center; color: #FA812F; margin-top: 50px;"> Stream 'Spill
+        the Feels' on Spotify!
+      </h1>
+    </div>
+  </div>
+  <div class="container-fluid background-container">
+    <div class="spotify">
+      <iframe src="https://open.spotify.com/embed/album/4xggkS8rdsJL3dgji8zW6W?utm_source=oembed"
+        style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen
+        allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;">
+      </iframe>
+    </div>
+  </div>
+
+  <footer style="background-color: #FAF6E3; padding: 20px; text-align: center;">
+    <div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+      <a href="https://www.facebook.com/seventeennews/"
+        style="text-decoration: none; font-size: 24px; color: #4A4947; transition: color 0.3s ease;">
+        <i class="fa-brands fa-facebook-f" style="font-size: 24px; color: #4A4947;"></i>
+      </a>
+      <a href="https://www.instagram.com/saythename_17?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        style="text-decoration: none; font-size: 24px; color: #4A4947; transition: color 0.3s ease;">
+        <i class="fa-brands fa-instagram" style="font-size: 24px; color: #4A4947;"></i>
+      </a>
+      <a href="https://x.com/pledis_17?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+        style="text-decoration: none; font-size: 24px; color: #4A4947; transition: color 0.3s ease;">
+        <i class="fa-brands fa-twitter" style="font-size: 24px; color: #4A4947;"></i>
+      </a>
+    </div>
+    <div style="margin-top: 20px; text-align: center; color: #4A4947;">
+      <img src="assets/pledis.png" alt="Pledis Logo" style="height: 50px; display: block; margin: 0 auto;">
+      <div style="font-size: 14px; margin-top: 10px;">
+        <span>&#169; 2024 Pledis Entertainment. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = document.querySelector('#carouselExampleFade');
+      const elementsToAnimate = document.querySelectorAll('.animate__animated');
+      let isManuallySliding = false;
+  
+      carousel.addEventListener('slide.bs.carousel', function () {
+        if (!isManuallySliding) {
+          elementsToAnimate.forEach(element => {
+            element.classList.remove('animate__fadeIn', 'animated-once');
+          });
+        }
+      });
+  
+      carousel.addEventListener('slid.bs.carousel', function () {
+        if (!isManuallySliding) {
+          elementsToAnimate.forEach(element => {
+            element.classList.add('animate__fadeIn');
+            element.classList.add('animated-once');
+          });
+        }
+      });
+  
+      const nextButton = document.querySelector('[data-bs-slide="next"]');
+      const prevButton = document.querySelector('[data-bs-slide="prev"]');
+      
+      nextButton.addEventListener('click', () => {
+        isManuallySliding = true;
+      });
+      prevButton.addEventListener('click', () => {
+        isManuallySliding = true;
+      });
+  
+      carousel.addEventListener('slid.bs.carousel', () => {
+        isManuallySliding = false;
+      });
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.classList.contains('animated-once')) {
+            entry.target.classList.add('animate__fadeIn');
+            entry.target.classList.add('animated-once');
+          }
+        });
+      }, { threshold: 0.1 });
+  
+      elementsToAnimate.forEach(element => observer.observe(element));
+    });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+  </script>
+  
+</body>
+
+</html>
