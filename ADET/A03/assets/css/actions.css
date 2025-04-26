@@ -1,0 +1,289 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+    font-family: "Br Sonoma", sans-serif;
+    font-weight: bold;
+
+}
+
+.navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: #328E6E;
+}
+
+.navbar-collapse.collapse.show {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2.display-3 {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: "BR Sonoma", sans-serif;
+}
+
+.bento-box {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.box1 {
+    background-color: #E8DFCA;
+}
+
+.box1-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.box2 {
+    background-color: #5F8B4C;
+    height: 230px;
+}
+
+.bento-box.box2 h2 {
+    font-family: 'Rangile', sans-serif;
+    color: white;
+}
+
+.box3 {
+    background-color: #0A6847;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.box3-image {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 80px;
+}
+
+.box3-title {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-family: 'Rangile', sans-serif;
+    color: white;
+}
+
+.info-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #E8DFCA;
+    text-decoration: none;
+}
+
+.info-icon {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.info-link:hover .info-icon,
+.info-link:active .info-icon {
+    color: white;
+}
+
+.box4 {
+    background-color: #ECEBDE;
+    height: 250px;
+    width: auto;
+}
+
+.box4-text {
+    font-family: 'Rangile', sans-serif;
+    color: #0A6847;
+}
+
+.thrive {
+    font-family: 'BR Sonoma', sans-serif;
+    font-style: italic;
+    color: #0A6847;
+}
+
+.box5 {
+    background-color: #0A6847;
+}
+
+.box6 {
+    background-color: #5F8B4C;
+}
+
+.box6.img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.box7 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.box7 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box8 {
+    background-color: #5F8B4C;
+    width: 100%;
+    height: 405px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box8 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box9 {
+    background-color: #0A6847;
+    width: 100%;
+    height: 405px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box9 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.box9-text {
+    font-family: 'Rangile', sans-serif;
+    font-size: 2rem;
+}
+
+.box10 {
+    background-color: #0A6847;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.box10 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.box11 {
+    background-color: #E8DFCA;
+    width: 265px;
+    height:300px;
+    
+}
+
+.card-desc {
+    font-family: 'Monteserrat', sans-serif;
+    color: #5F8B4C;
+}
+
+.biodiversity-text {
+    font-family: 'Rangile', sans-serif;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.percent {
+    font-family: 'Rangile', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.biodiversity-details {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 0.85rem;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Rangile', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+/* footer */
+footer {
+    background-color: #213448;
+    padding: 60px 0;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.footer-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #94B4C1;
+}
+
+.connect-text {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
