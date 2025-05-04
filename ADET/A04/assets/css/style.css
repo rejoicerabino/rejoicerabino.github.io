@@ -1,0 +1,164 @@
+body {
+    font-family: 'Familjen-grotesk', sans-serif;
+    background-color: #fcf8f3;
+    color: #2c2c2c;
+    overflow-y: hidden;
+}
+
+.navbar {
+    background-color: #181C14;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.employee-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #f0f0f0;
+}
+
+.employee-details {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    line-height: 1;
+    color: #fcf8f3;
+}
+
+.employee-name {
+    font-weight: bold;
+}
+
+.time-in {
+    font-size: 0.8rem;
+    color: #fcf8f3;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    background-color: #fffdfa;
+}
+
+.product-card {
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    background-color: #fffdfa;
+}
+
+.product-card:active {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.custom-button {
+    width: 120px;
+    border: 1px solid #333333;
+    background-color: transparent;
+    color: #333333;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background-color: #333333;
+    color: white;
+}
+
+.maincontainer {
+    height: 65dvh;
+    background-color: #fffdfa;
+    font-family: 'Familjen-grotesk', sans-serif;
+}
+
+#welcomeMessage h1 {
+    font-family: 'Italianno', serif;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+.receipt-card {
+    background-color: #F5ECD5;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 85dvh;
+}
+
+.receipt-scroll {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 4px;
+    flex-grow: 1;
+}
+
+.custom-print-button {
+    background-color: #181C14;
+    color: #FAF1E6;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-print-button:hover,
+.custom-print-button:active {
+    background-color: #948979;
+    color: #181C14;
+}
+
+#totalValue {
+    color: #18230F;
+    font-weight: bold;
+}
+
+.categories {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
+.logo-container img {
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+.topcontainer::-webkit-scrollbar {
+    height: 6px;
+}
+
+.topcontainer::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 3px;
+}
+
+.topcontainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
