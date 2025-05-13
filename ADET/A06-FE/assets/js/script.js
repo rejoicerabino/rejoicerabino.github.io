@@ -41,10 +41,10 @@ function loadCategories() {
 
     categories.forEach((category, index) => {
         categoriesContainer.innerHTML += `
-                    <div onclick="getAllProducts('${category.categoryID}')" class="card mx-1 custom-button p-2 text-center justify-content-center">
-                        <small class="category-name">${category.categoryName}</small>
-                    </div>
-                `;
+            <div onclick="getAllProducts('` + category.categoryID + `')" class="card mx-1 custom-button p-2 text-center justify-content-center">
+                <small class="category-name">` + category.categoryName + `</small>
+            </div>
+            `;
     });
 }
 
