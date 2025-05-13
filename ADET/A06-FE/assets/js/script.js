@@ -44,7 +44,7 @@ function loadCategories() {
             <div onclick="getAllProducts('` + category.categoryID + `')" class="card mx-1 custom-button p-2 text-center justify-content-center">
                 <small class="category-name">` + category.categoryName + `</small>
             </div>
-            `;
+        `;
     });
 }
 
@@ -56,47 +56,47 @@ function loadProducts() {
     products.forEach(product => {
         if (product.sizeName && product.sizePrice) {
             maincontainer.innerHTML += `
-                        <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                                onclick="addToReceipt('${product.sizePrice}', '${product.sizeCode}')">
-                                <img src="${product.productImage}" class="card-img-top mt-4" 
-                                    alt="${product.productName}" style="height: 150px; object-fit: contain;">
-                                <div class="card-body">
-                                    <p class="card-text text-start mb-1">${product.productName}</p>
-                                    <p class="text-start mb-0">${product.sizeName}</p>
-                                    <p class="fw-bold text-start mb-0">₱${product.sizePrice}</p>
-                                </div>
-                            </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
+                        onclick="addToReceipt('` + product.sizePrice + `', '` + product.sizeCode + `')">
+                        <img src="` + product.productImage + `" class="card-img-top mt-4" 
+                            alt="` + product.productName + `" style="height: 150px; object-fit: contain;">
+                        <div class="card-body">
+                            <p class="card-text text-start mb-1">` + product.productName + `</p>
+                            <p class="text-start mb-0">` + product.sizeName + `</p>
+                            <p class="fw-bold text-start mb-0">₱` + product.sizePrice + `</p>
                         </div>
-                    `;
+                    </div>
+                </div>
+            `;
         } else if (product.servingName && product.servingPrice) {
             maincontainer.innerHTML += `
-                        <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;"
-                                onclick="addToReceipt('${product.servingPrice}', '${product.productCode + product.servingCode}')">
-                                <img src="${product.servingImage}" class="card-img-top mt-4" style="height: 150px; object-fit: contain;">
-                                <div class="card-body">
-                                    <p class="card-text text-start mb-1">${product.productName}</p>
-                                    <p class="text-start mb-0">${product.servingName}</p>
-                                    <p class="fw-bold text-start mb-0">₱${product.servingPrice}</p>
-                                </div>
-                            </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;"
+                        onclick="addToReceipt('` + product.servingPrice + `', '` + (product.productCode + product.servingCode) + `')">
+                        <img src="` + product.servingImage + `" class="card-img-top mt-4" style="height: 150px; object-fit: contain;">
+                        <div class="card-body">
+                            <p class="card-text text-start mb-1">` + product.productName + `</p>
+                            <p class="text-start mb-0">` + product.servingName + `</p>
+                            <p class="fw-bold text-start mb-0">₱` + product.servingPrice + `</p>
                         </div>
-                    `;
+                    </div>
+                </div>
+            `;
         } else {
             maincontainer.innerHTML += `
-                        <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                                onclick="addToReceipt('${product.productPrice}','${product.productCode}')">
-                                <img src="${product.productImage}" class="card-img-top mt-4" 
-                                    alt="${product.productName}" style="height: 150px; object-fit: contain;">
-                                <div class="card-body">
-                                    <p class="card-text text-start mb-1">${product.productName}</p>
-                                    <p class="fw-bold text-start mb-0">₱${product.productPrice}</p>
-                                </div>
-                            </div>
+                <div onclick="addToReceipt('` + product.productPrice + `','` + product.productCode + `')" 
+                    class="col-md-4 d-flex justify-content-center">
+                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;">
+                        <img src="` + product.productImage + `" class="card-img-top mt-4" 
+                            alt="` + product.productName + `" style="height: 150px; object-fit: contain;">
+                        <div class="card-body">
+                            <p class="card-text text-start mb-1">` + product.productName + `</p>
+                            <p class="fw-bold text-start mb-0">₱` + product.productPrice + `</p>
                         </div>
-                    `;
+                    </div>
+                </div>
+            `;
         }
     });
 }
@@ -110,11 +110,11 @@ function addToReceipt(price, code) {
     totalValueElement.innerHTML = total;
 
     receiptContainer.innerHTML += `
-                <div class="d-flex flex-row justify-content-between">
-                    <div><small>${code}</small></div>
-                    <div><small>${price}</small></div>
-                </div>
-            `;
+        <div class="d-flex flex-row justify-content-between">
+            <div><small>${code}</small></div>
+            <div><small>${price}</small></div>
+        </div>
+    `;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
