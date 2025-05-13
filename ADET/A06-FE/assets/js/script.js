@@ -85,9 +85,9 @@ function loadProducts() {
             `;
         } else {
             maincontainer.innerHTML += `
-                <div onclick="addToReceipt('` + product.productPrice + `','` + product.productCode + `')" 
-                    class="col-md-4 d-flex justify-content-center">
-                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
+                        onclick="addToReceipt('` + product.productPrice + `','` + product.productCode + `')">
                         <img src="` + product.productImage + `" class="card-img-top mt-4" 
                             alt="` + product.productName + `" style="height: 150px; object-fit: contain;">
                         <div class="card-body">

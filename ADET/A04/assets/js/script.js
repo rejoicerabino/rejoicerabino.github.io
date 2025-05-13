@@ -466,8 +466,8 @@ function loadCategories() {
 
     products.forEach((product, index) => {
         categoriesContainer.innerHTML += `
-            <div onclick="loadProducts('${index}')" class="card mx-1 custom-button p-2 text-center justify-content-center">
-                <small class="category-name">${product.category}</small>
+           <div onclick="loadProducts('` + index + `')" class="card mx-1 custom-button p-2 text-center justify-content-center">
+                <small class="category-name">` + product.category + `</small>
             </div>
         `;
     });
@@ -483,13 +483,15 @@ function loadProducts(categoryIndex) {
             if (content.sizes) {
                 content.sizes.forEach(size => {
                     maincontainer.innerHTML += `
-                        <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" onclick="addToReceipt('${size.price}','${content.code + size.code}')">
-                                <img src="${size.img || content.img}" class="card-img-top mt-4" alt="${content.name}" style="height: 150px; object-fit: contain;">
+                       <div class="col-md-4 d-flex justify-content-center">
+                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
+                                onclick="addToReceipt('` + size.price + `','` + content.code + size.code + `')">
+                                <img src="` + (size.img || content.img) + `" class="card-img-top mt-4" 
+                                    alt="` + content.name + `" style="height: 150px; object-fit: contain;">
                                 <div class="card-body">
-                                    <p class="card-text text-start mb-1">${content.name}</p>
-                                    <p class=" text-start mb-0">${size.name}</p>
-                                    <p class="fw-bold text-start mb-0">₱${size.price}</p>
+                                    <p class="card-text text-start mb-1">` + content.name + `</p>
+                                    <p class="text-start mb-0">` + size.name + `</p>
+                                    <p class="fw-bold text-start mb-0">₱` + size.price + `</p>
                                 </div>
                             </div>
                         </div>
@@ -505,12 +507,14 @@ function loadProducts(categoryIndex) {
                 content.servings.forEach(serving => {
                     maincontainer.innerHTML += `
                         <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" onclick="addToReceipt('${serving.price}','${content.code + serving.code}')">
-                                <img src="${serving.img || content.img}" class="card-img-top mt-4" alt="${content.name}" style="height: 150px; object-fit: contain;">
+                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
+                                onclick="addToReceipt('` + serving.price + `','` + content.code + serving.code + `')">
+                                <img src="` + (serving.img || content.img) + `" class="card-img-top mt-4" 
+                                    alt="` + content.name + `" style="height: 150px; object-fit: contain;">
                                 <div class="card-body">
-                                    <p class="card-text text-start mb-1">${content.name}</p>
-                                    <p class=" text-start mb-0">${serving.name}</p>
-                                    <p class="fw-bold text-start mb-0">₱${serving.price}</p>
+                                    <p class="card-text text-start mb-1">` + content.name + `</p>
+                                    <p class="text-start mb-0">` + serving.name + `</p>
+                                    <p class="fw-bold text-start mb-0">₱` + serving.price + `</p>
                                 </div>
                             </div>
                         </div>
@@ -523,12 +527,14 @@ function loadProducts(categoryIndex) {
     else {
         products[categoryIndex].contents.forEach(content => {
             maincontainer.innerHTML += `
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" onclick="addToReceipt('${content.price}','${content.code}')">
-                        <img src="${content.img}" class="card-img-top mt-4" alt="${content.name}" style="height: 150px; object-fit: contain;">
+               <div class="col-md-4 d-flex justify-content-center">
+                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
+                        onclick="addToReceipt('` + content.price + `','` + content.code + `')">
+                        <img src="` + content.img + `" class="card-img-top mt-4" 
+                            alt="` + content.name + `" style="height: 150px; object-fit: contain;">
                         <div class="card-body">
-                            <p class="card-text text-start mb-1">${content.name}</p>
-                            <p class="fw-bold text-start mb-0">₱${content.price}</p>
+                            <p class="card-text text-start mb-1">` + content.name + `</p>
+                            <p class="fw-bold text-start mb-0">₱` + content.price + `</p>
                         </div>
                     </div>
                 </div>
