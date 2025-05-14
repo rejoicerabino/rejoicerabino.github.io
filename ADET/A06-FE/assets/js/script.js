@@ -55,50 +55,54 @@ function loadProducts() {
 
     products.forEach(product => {
         if (product.sizeName && product.sizePrice) {
-            maincontainer.innerHTML += `
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                        onclick="addToReceipt('` + product.sizePrice + `', '` + product.sizeCode + `')">
-                        <img src="` + product.productImage + `" class="card-img-top mt-4" 
-                            alt="` + product.productName + `" style="height: 150px; object-fit: contain;">
-                        <div class="card-body">
-                            <p class="card-text text-start mb-1">` + product.productName + `</p>
-                            <p class="text-start mb-0">` + product.sizeName + `</p>
-                            <p class="fw-bold text-start mb-0">₱` + product.sizePrice + `</p>
-                        </div>
-                    </div>
-                </div>
-            `;
+            maincontainer.innerHTML +=
+                '<div class="col-md-4 d-flex justify-content-center">' +
+                '<div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" ' +
+                'onclick="addToReceipt(\'' + product.sizePrice + '\', \'' + product.sizeCode + '\')">' +
+                '<img src="assets/img/' + product.productImage + '" ' +
+                'class="card-img-top mt-4" ' +
+                'alt="' + product.productName + '" ' +
+                'style="height: 150px; object-fit: contain;">' +
+                '<div class="card-body">' +
+                '<p class="card-text text-start mb-1">' + product.productName + '</p>' +
+                '<p class="text-start mb-0">' + product.sizeName + '</p>' +
+                '<p class="fw-bold text-start mb-0">₱' + product.sizePrice + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
         } else if (product.servingName && product.servingPrice) {
-            maincontainer.innerHTML += `
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;"
-                        onclick="addToReceipt('` + product.servingPrice + `', '` + (product.productCode + product.servingCode) + `')">
-                        <img src="` + product.servingImage + `" class="card-img-top mt-4" style="height: 150px; object-fit: contain;">
-                        <div class="card-body">
-                            <p class="card-text text-start mb-1">` + product.productName + `</p>
-                            <p class="text-start mb-0">` + product.servingName + `</p>
-                            <p class="fw-bold text-start mb-0">₱` + product.servingPrice + `</p>
-                        </div>
-                    </div>
-                </div>
-            `;
+            maincontainer.innerHTML +=
+                '<div class="col-md-4 d-flex justify-content-center">' +
+                '<div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" ' +
+                'onclick="addToReceipt(\'' + product.servingPrice + '\', \'' + (product.productCode + product.servingCode) + '\')">' +
+                '<img src="assets/img/' + product.servingImage + '" ' +
+                'class="card-img-top mt-4" ' +
+                'style="height: 150px; object-fit: contain;">' +
+                '<div class="card-body">' +
+                '<p class="card-text text-start mb-1">' + product.productName + '</p>' +
+                '<p class="text-start mb-0">' + product.servingName + '</p>' +
+                '<p class="fw-bold text-start mb-0">₱' + product.servingPrice + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
         } else {
-            maincontainer.innerHTML += `
-                <div class="col-md-4 d-flex justify-content-center">
-                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                        onclick="addToReceipt('` + product.productPrice + `','` + product.productCode + `')">
-                        <img src="` + product.productImage + `" class="card-img-top mt-4" 
-                            alt="` + product.productName + `" style="height: 150px; object-fit: contain;">
-                        <div class="card-body">
-                            <p class="card-text text-start mb-1">` + product.productName + `</p>
-                            <p class="fw-bold text-start mb-0">₱` + product.productPrice + `</p>
-                        </div>
-                    </div>
-                </div>
-            `;
+            maincontainer.innerHTML +=
+                '<div class="col-md-4 d-flex justify-content-center">' +
+                '<div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" ' +
+                'onclick="addToReceipt(\'' + product.productPrice + '\', \'' + product.productCode + '\')">' +
+                '<img src="assets/img/' + product.productImage + '" ' +
+                'class="card-img-top mt-4" ' +
+                'alt="' + product.productName + '" ' +
+                'style="height: 150px; object-fit: contain;">' +
+                '<div class="card-body">' +
+                '<p class="card-text text-start mb-1">' + product.productName + '</p>' +
+                '<p class="fw-bold text-start mb-0">₱' + product.productPrice + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
         }
     });
+
 }
 
 // receipt

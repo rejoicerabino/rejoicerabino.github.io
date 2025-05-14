@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2025 at 09:21 AM
+-- Generation Time: May 14, 2025 at 11:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +38,7 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (1, 'Refreshments'),
-(2, 'Alcohol Drinks'),
+(2, 'Alcoholic Drinks'),
 (3, 'Pasta'),
 (4, 'Pizza'),
 (5, 'Steak'),
@@ -65,43 +65,43 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`productID`, `categoryID`, `productName`, `productCode`, `isAvailable`, `productPrice`, `productImage`) VALUES
-(1, 1, 'San Pellegrino Limonata', 'SPLM', 1, 0, 'assets/img/limonata.png'),
-(2, 1, 'San Pellegrino Aranciata', 'SPAR', 1, 0, 'assets/img/aranciata.png'),
-(3, 1, 'Chinotto', 'CHNT', 1, 0, 'assets/img/chinotto.png'),
-(4, 1, 'Crodino', 'CRD', 1, 0, 'assets/img/crodino.png'),
-(5, 1, 'Cedrata', 'CDRT', 1, 0, 'assets/img/cedrata.png'),
-(6, 2, 'Prosecco', 'PRSC', 1, 0, 'assets/img/prosecco.png'),
-(7, 2, 'Chianti', 'CHNT', 1, 0, 'assets/img/chianti.png'),
-(8, 2, 'Barolo', 'BRLO', 1, 0, 'assets/img/barolo.png'),
-(9, 2, 'Amarone', 'AMRN', 1, 0, 'assets/img/amarone.png'),
-(10, 2, 'Limoncello', 'LMCL', 1, 0, 'assets/img/limoncello.png'),
-(11, 2, 'Asti Spumante', 'ASTI', 1, 0, 'assets/img/asti.png'),
-(12, 2, 'Montepulciano D\' Abruzzo', 'MDA', 1, 0, 'assets/img/montepulciano.png'),
-(13, 3, 'Spaghetti alla Carbonara', 'CBNR', 1, 560, 'assets/img/carbonara.png'),
-(14, 3, 'Penne all\'Arrabbiata', 'ARRB', 1, 455, 'assets/img/arrabbiata.png'),
-(15, 3, 'Lasagna', 'LSGN', 1, 560, 'assets/img/lasagna.png'),
-(16, 3, 'Fettuccine Alfredo', 'FTTA', 1, 530, 'assets/img/alfredo.png'),
-(17, 3, 'Ravioli di Ricotta', 'RVLC', 1, 880, 'assets/img/ravioli.png'),
-(18, 3, 'Tagliatelle al Ragù', 'TAGR', 1, 560, 'assets/img/ragu.png'),
-(19, 3, 'Gnocchi al Pesto', 'GNCP', 1, 750, 'assets/img/gnocchi.png'),
-(20, 4, 'Margherita', 'MARG', 1, 455, 'assets/img/Margherita.png'),
-(21, 4, 'Quattro Stagioni', '4STG', 1, 480, 'assets/img/Stagioni.png'),
-(22, 4, 'Diavola', 'DIAV', 1, 460, 'assets/img/Diavola.png'),
-(23, 4, 'Capricciosa', 'CAPR', 1, 490, 'assets/img/Capricciosa.png'),
-(24, 4, 'Prosciutto e Funghi', 'PRSF', 1, 480, 'assets/img/Funghi.png'),
-(25, 5, 'Bistecca alla Fiorentina', 'BSTF', 1, 900, 'assets/img/Bistecca.png'),
-(26, 5, 'Tagliata di Manzo', 'TAGM', 1, 950, 'assets/img/Tagliata.png'),
-(27, 5, 'Filetto al Pepe Verde', 'FLPV', 1, 980, 'assets/img/Filetto.png'),
-(28, 5, 'Scaloppine al Vino Bianco', 'SCVB', 1, 900, 'assets/img/Scaloppine.png'),
-(29, 5, 'Cotoletta alla Milanese', 'CTML', 1, 920, 'assets/img/Cotoletta.png'),
-(30, 5, 'Saltimbocca alla Romana', 'SLTR', 1, 940, 'assets/img/Saltimbocca.png'),
-(31, 6, 'Tiramisù', 'TRMS', 1, 160, 'assets/img/Tiramisu.png'),
-(32, 6, 'Panna Cotta', 'PNCT', 1, 150, 'assets/img/Panna.png'),
-(33, 6, 'Cannoli Siciliani', 'CNSC', 1, 180, 'assets/img/Cannoli.png'),
-(34, 6, 'Gelato alla Fragola', 'GLFG', 1, 155, 'assets/img/Fragola.png'),
-(35, 6, 'Zabaglione', 'ZBLN', 1, 160, 'assets/img/Zabaglione.png'),
-(36, 6, 'Torta Caprese', 'TRTC', 1, 195, 'assets/img/Caprese.png'),
-(37, 6, 'Cassata Siciliana', 'CASS', 1, 210, 'assets/img/Cassata.png');
+(1, 1, 'San Pellegrino Limonata', 'SPLM', 1, 0, 'limonata.png'),
+(2, 1, 'San Pellegrino Aranciata', 'SPAR', 1, 0, 'aranciata.png'),
+(3, 1, 'Chinotto', 'CHNT', 1, 0, 'chinotto.png'),
+(4, 1, 'Crodino', 'CRD', 1, 0, 'crodino.png'),
+(5, 1, 'Cedrata', 'CDRT', 1, 0, 'cedrata.png'),
+(6, 2, 'Prosecco', 'PRSC', 1, 0, 'prosecco.png'),
+(7, 2, 'Chianti', 'CHNT', 1, 0, 'chianti.png'),
+(8, 2, 'Barolo', 'BRLO', 1, 0, 'barolo.png'),
+(9, 2, 'Amarone', 'AMRN', 1, 0, 'amarone.png'),
+(10, 2, 'Limoncello', 'LMCL', 1, 0, 'limoncello.png'),
+(11, 2, 'Asti Spumante', 'ASTI', 1, 0, 'asti.png'),
+(12, 2, 'Montepulciano D\' Abruzzo', 'MDA', 1, 0, 'montepulciano.png'),
+(13, 3, 'Spaghetti alla Carbonara', 'CBNR', 1, 560, 'carbonara.png'),
+(14, 3, 'Penne all\'Arrabbiata', 'ARRB', 1, 455, 'arrabbiata.png'),
+(15, 3, 'Lasagna', 'LSGN', 1, 560, 'lasagna.png'),
+(16, 3, 'Fettuccine Alfredo', 'FTTA', 1, 530, 'alfredo.png'),
+(17, 3, 'Ravioli di Ricotta', 'RVLC', 1, 880, 'ravioli.png'),
+(18, 3, 'Tagliatelle al Ragù', 'TAGR', 1, 560, 'ragu.png'),
+(19, 3, 'Gnocchi al Pesto', 'GNCP', 1, 750, 'gnocchi.png'),
+(20, 4, 'Margherita', 'MARG', 1, 455, 'Margherita.png'),
+(21, 4, 'Quattro Stagioni', '4STG', 1, 480, 'Stagioni.png'),
+(22, 4, 'Diavola', 'DIAV', 1, 460, 'Diavola.png'),
+(23, 4, 'Capricciosa', 'CAPR', 1, 490, 'Capricciosa.png'),
+(24, 4, 'Prosciutto e Funghi', 'PRSF', 1, 480, 'Funghi.png'),
+(25, 5, 'Bistecca alla Fiorentina', 'BSTF', 1, 900, 'Bistecca.png'),
+(26, 5, 'Tagliata di Manzo', 'TAGM', 1, 950, 'Tagliata.png'),
+(27, 5, 'Filetto al Pepe Verde', 'FLPV', 1, 980, 'Filetto.png'),
+(28, 5, 'Scaloppine al Vino Bianco', 'SCVB', 1, 900, 'Scaloppine.png'),
+(29, 5, 'Cotoletta alla Milanese', 'CTML', 1, 920, 'Cotoletta.png'),
+(30, 5, 'Saltimbocca alla Romana', 'SLTR', 1, 940, 'Saltimbocca.png'),
+(31, 6, 'Tiramisù', 'TRMS', 1, 160, 'Tiramisu.png'),
+(32, 6, 'Panna Cotta', 'PNCT', 1, 150, 'Panna.png'),
+(33, 6, 'Cannoli Siciliani', 'CNSC', 1, 180, 'Cannoli.png'),
+(34, 6, 'Gelato alla Fragola', 'GLFG', 1, 155, 'Fragola.png'),
+(35, 6, 'Zabaglione', 'ZBLN', 1, 160, 'Zabaglione.png'),
+(36, 6, 'Torta Caprese', 'TRTC', 1, 195, 'Caprese.png'),
+(37, 6, 'Cassata Siciliana', 'CASS', 1, 210, 'Cassata.png');
 
 -- --------------------------------------------------------
 
@@ -123,20 +123,20 @@ CREATE TABLE `servings` (
 --
 
 INSERT INTO `servings` (`servingsID`, `productID`, `servingName`, `servingCode`, `servingPrice`, `servingImage`) VALUES
-(1, 6, 'glass', 'GLS', 450, 'assets/img/GProsecco.png'),
-(2, 6, 'bottle', 'BTL', 1800, 'assets/img/BProsecco.png'),
-(3, 7, 'glass', 'GLS', 520, 'assets/img/GChianti.png'),
-(4, 7, 'bottle', 'BTL', 2000, 'assets/img/BChianti.png'),
-(5, 8, 'glass', 'GLS', 750, 'assets/img/GBarolo.png'),
-(6, 8, 'bottle', 'BTL', 3000, 'assets/img/BBarolo.png'),
-(7, 9, 'glass', 'GLS', 820, 'assets/img/GAmarone.png'),
-(8, 9, 'bottle', 'BTL', 3300, 'assets/img/BAmarone.png'),
-(9, 10, 'glass', 'GLS', 350, 'assets/img/GLimoncello.png'),
-(10, 10, 'bottle', 'BTL', 1400, 'assets/img/BLimoncello.png'),
-(11, 11, 'glass', 'GLS', 480, 'assets/img/GAsti.png'),
-(12, 11, 'bottle', 'BTL', 1900, 'assets/img/BAsti.png'),
-(13, 12, 'glass', 'GLS', 390, 'assets/img/GMda.png'),
-(14, 12, 'bottle', 'BTL', 1600, 'assets/img/BMda.png');
+(1, 6, 'glass', 'GLS', 450, 'GProsecco.png'),
+(2, 6, 'bottle', 'BTL', 1800, 'BProsecco.png'),
+(3, 7, 'glass', 'GLS', 520, 'GChianti.png'),
+(4, 7, 'bottle', 'BTL', 2000, 'BChianti.png'),
+(5, 8, 'glass', 'GLS', 750, 'GBarolo.png'),
+(6, 8, 'bottle', 'BTL', 3000, 'BBarolo.png'),
+(7, 9, 'glass', 'GLS', 820, 'GAmarone.png'),
+(8, 9, 'bottle', 'BTL', 3300, 'BAmarone.png'),
+(9, 10, 'glass', 'GLS', 350, 'GLimoncello.png'),
+(10, 10, 'bottle', 'BTL', 1400, 'BLimoncello.png'),
+(11, 11, 'glass', 'GLS', 480, 'GAsti.png'),
+(12, 11, 'bottle', 'BTL', 1900, 'BAsti.png'),
+(13, 12, 'glass', 'GLS', 390, 'GMda.png'),
+(14, 12, 'bottle', 'BTL', 1600, 'BMda.png');
 
 -- --------------------------------------------------------
 
