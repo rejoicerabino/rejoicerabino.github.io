@@ -1,549 +1,111 @@
-var products = [
-    {
-        "category": "Refreshments",
-        "contents": [
-            {
-                "isAvailable": true,
-                "name": "San Pellegrino Limonata",
-                "code": "SPLM",
-                "img": "assets/img/limonata.png",
-                "sizes": [
-                    {
-                        "name": "regular",
-                        "code": "RG",
-                        "price": 180
-                    },
-                    {
-                        "name": "medium",
-                        "code": "MD",
-                        "price": 220
-                    },
-                    {
-                        "name": "large",
-                        "code": "LG",
-                        "price": 260
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "San Pellegrino Aranciata",
-                "code": "SPAR",
-                "img": "assets/img/aranciata.png",
-                "sizes": [
-                    {
-                        "name": "regular",
-                        "code": "RG",
-                        "price": 180
-                    },
-                    {
-                        "name": "medium",
-                        "code": "MD",
-                        "price": 220
-                    },
-                    {
-                        "name": "large",
-                        "code": "LG",
-                        "price": 260
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Chinotto",
-                "code": "CHNT",
-                "img": "assets/img/chinotto.png",
-                "sizes": [
-                    {
-                        "name": "regular",
-                        "code": "RG",
-                        "price": 200
-                    },
-                    {
-                        "name": "medium",
-                        "code": "MD",
-                        "price": 240
-                    },
-                    {
-                        "name": "large",
-                        "code": "LG",
-                        "price": 280
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Crodino",
-                "code": "CRD",
-                "img": "assets/img/crodino.png",
-                "sizes": [
-                    {
-                        "name": "regular",
-                        "code": "RG",
-                        "price": 190
-                    },
-                    {
-                        "name": "medium",
-                        "code": "MD",
-                        "price": 230
-                    },
-                    {
-                        "name": "large",
-                        "code": "LG",
-                        "price": 270
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Cedrata",
-                "code": "CDRT",
-                "img": "assets/img/cedrata.png",
-                "sizes": [
-                    {
-                        "name": "regular",
-                        "code": "RG",
-                        "price": 190
-                    },
-                    {
-                        "name": "medium",
-                        "code": "MD",
-                        "price": 230
-                    },
-                    {
-                        "name": "large",
-                        "code": "LG",
-                        "price": 270
-                    }
-                ]
-            }
-        ]
-    },
+var categories = [];
+var products = [];
 
-    {
-        "category": "Alcoholic Drinks",
-        "contents": [
-            {
-                "isAvailable": true,
-                "name": "Prosecco",
-                "code": "PRSC",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 450,
-                        "img": "assets/img/GProsecco.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 1800,
-                        "img": "assets/img/BProsecco.png"
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Chianti",
-                "code": "CHNT",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 520,
-                        "img": "assets/img/GChianti.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 2000,
-                        "img": "assets/img/BChianti.png"
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Barolo",
-                "code": "BRLO",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 750,
-                        "img": "assets/img/GBarolo.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 3000,
-                        "img": "assets/img/BBarolo.png"
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Amarone",
-                "code": "AMRN",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 820,
-                        "img": "assets/img/GAmarone.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 3300,
-                        "img": "assets/img/BAmarone.png"
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Limoncello",
-                "code": "LMCL",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 350,
-                        "img": "assets/img/GLimoncello.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 1400,
-                        "img": "assets/img/BLimoncello.png"
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Asti Spumante",
-                "code": "ASTI",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 480,
-                        "img": "assets/img/GAsti.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 1900,
-                        "img": "assets/img/BAsti.png"
-                    }
-                ]
-            },
-            {
-                "isAvailable": true,
-                "name": "Montepulciano D' Abruzzo",
-                "code": "MDA",
-                "servings": [
-                    {
-                        "name": "glass",
-                        "code": "GLS",
-                        "price": 390,
-                        "img": "assets/img/GMda.png"
-                    },
-                    {
-                        "name": "bottle",
-                        "code": "BTL",
-                        "price": 1600,
-                        "img": "assets/img/BMda.png"
-                    }
-                ]
-            }
-        ]
-    },
+// to fetch all categories
+const getAllCategories = async () => {
+    fetch('http://localhost/ACADS/rejoicerabino.github.io/ADET/A06-BE/categories.php')
+        .then(response => response.json())
+        .then(data => {
+            categories = data;
+            loadCategories();
+        });
+}
 
-    {
-        "category": "Pasta",
-        "contents": [
-            {
-                "isAvailable": true,
-                "name": "Spaghetti alla Carbonara",
-                "code": "CBNR",
-                "price": 560,
-                "img": "assets/img/carbonara.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Penne all'Arrabbiata",
-                "code": "ARRB",
-                "price": 455,
-                "img": "assets/img/arrabbiata.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Lasagna",
-                "code": "LSGN",
-                "price": 560,
-                "img": "assets/img/lasagna.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Fettuccine Alfredo",
-                "code": "FTTA",
-                "price": 530,
-                "img": "assets/img/alfredo.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Ravioli di Ricotta",
-                "code": "RVLC",
-                "price": 880,
-                "img": "assets/img/ravioli.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Tagliatelle al Ragù",
-                "code": "TAGR",
-                "price": 560,
-                "img": "assets/img/ragu.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Gnocchi al Pesto",
-                "code": "GNCP",
-                "price": 750,
-                "img": "assets/img/gnocchi.png"
-            }
-        ]
-    },
+// to fetch all products
+const getAllProducts = async (categoryID) => {
+    const categoryData = {
+        categoryID: categoryID
+    };
 
-    {
-        "category": "Pizza",
-        "contents": [
-            {
-                "isAvailable": true,
-                "name": "Margherita",
-                "code": "MARG",
-                "price": 455,
-                "img": "assets/img/Margherita.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Quattro Stagioni",
-                "code": "4STG",
-                "price": 480,
-                "img": "assets/img/Stagioni.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Diavola",
-                "code": "DIAV",
-                "price": 460,
-                "img": "assets/img/Diavola.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Capricciosa",
-                "code": "CAPR",
-                "price": 490,
-                "img": "assets/img/Capricciosa.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Prosciutto e Funghi",
-                "code": "PRSF",
-                "price": 480,
-                "img": "assets/img/Funghi.png"
-            }
-        ]
-    },
-    {
-        "category": "Steak",
-        "contents": [
-            {
-                "isAvailable": true,
-                "name": "Bistecca alla Fiorentina",
-                "code": "BSTF",
-                "price": 900,
-                "img": "assets/img/Bistecca.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Tagliata di Manzo",
-                "code": "TAGM",
-                "price": 950,
-                "img": "assets/img/Tagliata.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Filetto al Pepe Verde",
-                "code": "FLPV",
-                "price": 980,
-                "img": "assets/img/Filetto.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Scaloppine al Vino Bianco",
-                "code": "SCVB",
-                "price": 900,
-                "img": "assets/img/Scaloppine.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Cotoletta alla Milanese",
-                "code": "CTML",
-                "price": 920,
-                "img": "assets/img/Cotoletta.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Saltimbocca alla Romana",
-                "code": "SLTR",
-                "price": 940,
-                "img": "assets/img/Saltimbocca.png"
-            },
-        ]
-    },
+    fetch('http://localhost/ACADS/rejoicerabino.github.io/ADET/A06-BE/products.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(categoryData)
+    })
+        .then(response => response.json())
+        .then(data => {
+            products = data;
+            loadProducts();
+        });
+}
 
-    {
-        "category": "Desserts",
-        "contents": [
-            {
-                "isAvailable": true,
-                "name": "Tiramisù",
-                "code": "TRMS",
-                "price": 160,
-                "img": "assets/img/Tiramisu.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Panna Cotta",
-                "code": "PNCT",
-                "price": 150,
-                "img": "assets/img/Panna.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Cannoli Siciliani",
-                "code": "CNSC",
-                "price": 180,
-                "img": "assets/img/Cannoli.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Gelato alla Fragola",
-                "code": "GLFG",
-                "price": 155,
-                "img": "assets/img/Fragola.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Zabaglione",
-                "code": "ZBLN",
-                "price": 160,
-                "img": "assets/img/Zabaglione.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Torta Caprese",
-                "code": "TRTC",
-                "price": 195,
-                "img": "assets/img/Caprese.png"
-            },
-            {
-                "isAvailable": true,
-                "name": "Cassata Siciliana",
-                "code": "CASS",
-                "price": 210,
-                "img": "assets/img/Cassata.png"
-            }
-        ]
-    },
-
-];
+getAllCategories();
 
 var total = 0;
 
+// load categories
 function loadCategories() {
     var categoriesContainer = document.getElementById("categories");
 
-    products.forEach((product, index) => {
+    categories.forEach((category, index) => {
         categoriesContainer.innerHTML += `
-           <div onclick="loadProducts('` + index + `')" class="card mx-1 custom-button p-2 text-center justify-content-center">
-                <small class="category-name">` + product.category + `</small>
+            <div onclick="getAllProducts('` + category.categoryID + `')" class="card mx-1 custom-button p-2 text-center justify-content-center">
+                <small class="category-name">` + category.categoryName + `</small>
             </div>
         `;
     });
 }
 
-function loadProducts(categoryIndex) {
+// load the products
+function loadProducts() {
     var maincontainer = document.getElementById("maincontainer");
     maincontainer.innerHTML = "";
 
-    // products with sizes
-    if (categoryIndex == 0) {
-        products[categoryIndex].contents.forEach(content => {
-            if (content.sizes) {
-                content.sizes.forEach(size => {
-                    maincontainer.innerHTML += `
-                       <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                                onclick="addToReceipt('` + size.price + `','` + content.code + size.code + `')">
-                                <img src="` + (size.img || content.img) + `" class="card-img-top mt-4" 
-                                    alt="` + content.name + `" style="height: 150px; object-fit: contain;">
-                                <div class="card-body">
-                                    <p class="card-text text-start mb-1">` + content.name + `</p>
-                                    <p class="text-start mb-0">` + size.name + `</p>
-                                    <p class="fw-bold text-start mb-0">₱` + size.price + `</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-        });
-    }
-    // products with servings
-    else if (categoryIndex == 1) {
-        products[categoryIndex].contents.forEach(content => {
-            if (content.servings) {
-                content.servings.forEach(serving => {
-                    maincontainer.innerHTML += `
-                        <div class="col-md-4 d-flex justify-content-center">
-                            <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                                onclick="addToReceipt('` + serving.price + `','` + content.code + serving.code + `')">
-                                <img src="` + (serving.img || content.img) + `" class="card-img-top mt-4" 
-                                    alt="` + content.name + `" style="height: 150px; object-fit: contain;">
-                                <div class="card-body">
-                                    <p class="card-text text-start mb-1">` + content.name + `</p>
-                                    <p class="text-start mb-0">` + serving.name + `</p>
-                                    <p class="fw-bold text-start mb-0">₱` + serving.price + `</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-        });
-    }
-    // products without sizes or servings
-    else {
-        products[categoryIndex].contents.forEach(content => {
-            maincontainer.innerHTML += `
-               <div class="col-md-4 d-flex justify-content-center">
-                    <div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" 
-                        onclick="addToReceipt('` + content.price + `','` + content.code + `')">
-                        <img src="` + content.img + `" class="card-img-top mt-4" 
-                            alt="` + content.name + `" style="height: 150px; object-fit: contain;">
-                        <div class="card-body">
-                            <p class="card-text text-start mb-1">` + content.name + `</p>
-                            <p class="fw-bold text-start mb-0">₱` + content.price + `</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-        });
-    }
+    products.forEach(product => {
+        if (product.sizeName && product.sizePrice) {
+            maincontainer.innerHTML +=
+                '<div class="col-md-4 d-flex justify-content-center">' +
+                '<div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" ' +
+                'onclick="addToReceipt(\'' + product.sizePrice + '\', \'' + product.sizeCode + '\')">' +
+                '<img src="assets/img/' + product.productImage + '" ' +
+                'class="card-img-top mt-4" ' +
+                'alt="' + product.productName + '" ' +
+                'style="height: 150px; object-fit: contain;">' +
+                '<div class="card-body">' +
+                '<p class="card-text text-start mb-1">' + product.productName + '</p>' +
+                '<p class="text-start mb-0">' + product.sizeName + '</p>' +
+                '<p class="fw-bold text-start mb-0">₱' + product.sizePrice + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        } else if (product.servingName && product.servingPrice) {
+            maincontainer.innerHTML +=
+                '<div class="col-md-4 d-flex justify-content-center">' +
+                '<div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" ' +
+                'onclick="addToReceipt(\'' + product.servingPrice + '\', \'' + (product.productCode + product.servingCode) + '\')">' +
+                '<img src="assets/img/' + product.servingImage + '" ' +
+                'class="card-img-top mt-4" ' +
+                'style="height: 150px; object-fit: contain;">' +
+                '<div class="card-body">' +
+                '<p class="card-text text-start mb-1">' + product.productName + '</p>' +
+                '<p class="text-start mb-0">' + product.servingName + '</p>' +
+                '<p class="fw-bold text-start mb-0">₱' + product.servingPrice + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        } else {
+            maincontainer.innerHTML +=
+                '<div class="col-md-4 d-flex justify-content-center">' +
+                '<div class="product-card mx-2 my-2" style="width: 18rem; cursor: pointer;" ' +
+                'onclick="addToReceipt(\'' + product.productPrice + '\', \'' + product.productCode + '\')">' +
+                '<img src="assets/img/' + product.productImage + '" ' +
+                'class="card-img-top mt-4" ' +
+                'alt="' + product.productName + '" ' +
+                'style="height: 150px; object-fit: contain;">' +
+                '<div class="card-body">' +
+                '<p class="card-text text-start mb-1">' + product.productName + '</p>' +
+                '<p class="fw-bold text-start mb-0">₱' + product.productPrice + '</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        }
+    });
+
 }
 
-
+// receipt
 function addToReceipt(price, code) {
     var receiptContainer = document.getElementById("receipt");
     total = parseFloat(total) + parseFloat(price);
@@ -552,23 +114,53 @@ function addToReceipt(price, code) {
     totalValueElement.innerHTML = total;
 
     receiptContainer.innerHTML += `
-    <div class="d-flex flex-row justify-content-between">
-      <div><small>`+ code + `</small></div>
-      <div><small>`+ price + `</small></div>
-    </div>
+        <div class="d-flex flex-row justify-content-between">
+            <div><small>${code}</small></div>
+            <div><small>${price}</small></div>
+        </div>
     `;
 }
-
-loadCategories();
 
 document.addEventListener('DOMContentLoaded', () => {
     const categoriesContainer = document.getElementById('categories');
     const welcomeMessage = document.getElementById('welcomeMessage');
+    const localTime = document.getElementById('local-time');
+    const orderNumber = document.getElementById('order-number');
+
+    if (localTime) {
+        localTime.style.display = 'none';
+    }
+    if (orderNumber) {
+        orderNumber.style.display = 'none';
+    }
 
     categoriesContainer.addEventListener('click', () => {
         if (welcomeMessage) {
             welcomeMessage.style.display = 'none';
         }
+
+        if (localTime) {
+            localTime.style.display = 'block';
+        }
+        if (orderNumber) {
+            orderNumber.style.display = 'block';
+        }
     });
 });
+
+function updateLocalTime() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours() % 12 || 12).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+    const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes} ${ampm}`;
+    document.getElementById('local-time').textContent = formattedDateTime;
+}
+
+updateLocalTime();
+setInterval(updateLocalTime, 60000);
+
 

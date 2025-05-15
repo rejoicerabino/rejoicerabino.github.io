@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Racini's Kitchen</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://fonts.cdnfonts.com/css/familjen-grotesk" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/img/rktab.png" type="image/x-icon">
@@ -23,6 +24,7 @@
             <img src="assets/img/profile.jpg" alt="Profile" class="profile-img">
         </div>
     </nav>
+
     <div class="container-fluid">
         <div class="row pt-3">
             <div class="col-9">
@@ -45,11 +47,11 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class="receipt-card p-3">
+                <div class="receipt-card p-3" id="order-details">
                     <div class="order-details">
                         <div class="h5 fw-bold">Order Details</div>
-                        <span>2025-05-03 14:30</span><br>
-                        <span>Order Number: #0717</span>
+                        <span id="local-time">Local Time: </span>
+                        <span id="order-number">Order Number: #0717</span>
                     </div>
                     <div id="receipt" class="receipt-scroll flex-grow-1 mb-3"></div>
                     <hr class="my-3" style="height: 3px; background-color: black; border: none;">
@@ -64,7 +66,9 @@
     </div>
 
     <script src="assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
