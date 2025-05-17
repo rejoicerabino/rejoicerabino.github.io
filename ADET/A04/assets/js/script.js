@@ -119,8 +119,9 @@ function addToReceipt(price, code) {
             <div><small>${price}</small></div>
         </div>
     `;
-}
+} 
 
+// opening message
 document.addEventListener('DOMContentLoaded', () => {
     const categoriesContainer = document.getElementById('categories');
     const welcomeMessage = document.getElementById('welcomeMessage');
