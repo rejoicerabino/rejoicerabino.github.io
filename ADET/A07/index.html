@@ -11,7 +11,7 @@
     <link href="https://fonts.cdnfonts.com/css/tropic-garden" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/bolton" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/fathers" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
@@ -64,6 +64,56 @@
         font-style: italic;
 
     }
+
+    .custom-card {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .custom-btn {
+        background-color: #EAE4D5;
+        color: #000;
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        font-weight: 500;
+        border-radius: 0;
+
+    }
+
+    .custom-btn:hover {
+        background-color: #B6B09F;
+        color: #000;
+    }
+
+    footer {
+        font-family: 'Inclusive Sans', sans-serif;
+        padding: 2rem 0;
+    }
+
+    footer .connect-text,
+    footer strong {
+        font-family: 'Margesh', cursive;
+    }
+
+    footer .footer-icons a {
+        color: #FAA4BD;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    footer .footer-icons a:hover {
+        color: #670D2F;
+    }
+
+    footer .footer-text {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+    }
 </style>
 </head>
 
@@ -79,7 +129,7 @@
                 <div class="ms-auto">
                     <a href="#new"><button class="btn-new">New</button></a>
                     <a href="#sale"><button class="btn-sale">Sale</button></a>
-                    <a href="#shop"><button class="btn-shop">Collections</button></a>
+                    <a href="#collections"><button class="btn-shop">Collections</button></a>
                 </div>
             </div>
         </div>
@@ -127,16 +177,16 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="container-fluid py-5" id="new">
+    <div class="container-fluid py-3" id="new">
         <div class="row align-items-center px-5">
             <div class="col-12">
-                <h2 class="text-center" style="font-family: 'Margesh',sans serif;">Just in</h2>
+                <h2 class="text-center mt-3 mb-3" style="font-family: 'Margesh',sans serif;">Just in</h2>
                 <div class="row" id="cardsContainer"></div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid my-2" id="sale">
+    <div class="container-fluid my-3" id="sale">
         <div class="row align-items-center px-5">
             <div class="col-12 text-center mb-4">
                 <h3 style="font-family: 'Margesh', sans-serif; color: #A53860;">Happening now!</h3>
@@ -153,10 +203,38 @@
         </div>
     </div>
 
+    <div class="container-fluid py-3" id="collections">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold" style="font-family: 'Margesh',sans serif; color: #2A3335;">Discover your style</h2>
+            <p class="text-muted" style="font-family: 'Inclusive Sans',sans serif; color: #2A3335;">
+                Find your perfect swimwear with our range of styles to suit every taste.
+            </p>
+        </div>
+        <div class="row g-4 g-md-6 g-lg-4 g-xl-8 mt-3 mt-md-0 justify-content-center" id="cardContainer"></div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-12 mb-4">
+                    <div class="connect-text">Visit us on</div>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 footer-text">
+                    © 2025 <strong>Aurora</strong>. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/collections.js"></script>
     <script src="assets/js/bikiniArray.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -18,9 +18,9 @@ cardsData.forEach(function (card) {
     col.className = "col-md-6 col-lg-4 col-xl-3 mb-4";
 
     var cardHtml =
-        '<div class="card border-0 shadow-sm h-100 rounded">' +
+        '<div class="card border-0 shadow-sm h-100 rounded" style="font-family: \'Inclusive Sans\', sans-serif;">' +
         '<img src="' + card.img + '" class="card-img-top" alt="' + card.title + '" style="height: 350px; object-fit: cover;">' +
-        '<div class="card-body px-0 mx-2">' +
+        '<div class="card-body px-0 mx-2" style="">' +
         '<h6 class="fw-bold mb-1">' + card.title + '</h6>' +
         '<p class="text-muted small mb-1">' + card.text + '</p>' +
         '<p class="fw-bold mb-0">₱' + card.price + '</p>' +
