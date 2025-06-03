@@ -1,4 +1,4 @@
-var cardsData = [
+const cardsData = [
     { title: "Isla Tie-Front Bikini", text: "Tropical florals in lush greens and coral tones", price: "2,850", img: "assets/img/isla.jpg" },
     { title: "Amos Shell Bikini", text: "Sea-inspired with shell charm details", price: "2,650", img: "assets/img/amos.jpg" },
     { title: "Calypso Cutout Bikini", text: "A pure white bikini with graceful cut-outs and a central ring", price: "2,950", img: "assets/img/calypso.jpg" },
@@ -11,22 +11,30 @@ var cardsData = [
     { title: "Cambridge Check Bikini", text: "Preppy checkered pattern with gold accents", price: "2,990", img: "assets/img/cambridge.jpg" }
 ];
 
-var cardsContainer = document.getElementById("cardsContainer");
+const cardsContainer = document.getElementById("cardsContainer");
 
-cardsData.forEach(function (card) {
-    var col = document.createElement("div");
+function createCardElement(card) {
+    const col = document.createElement("div");
     col.className = "col-md-6 col-lg-4 col-xl-3 mb-4";
 
-    var cardHtml =
-        '<div class="card border-0 shadow-sm h-100 rounded" style="font-family: \'Inclusive Sans\', sans-serif;">' +
-        '<img src="' + card.img + '" class="card-img-top" alt="' + card.title + '" style="height: 350px; object-fit: cover;">' +
-        '<div class="card-body px-0 mx-2" style="">' +
-        '<h6 class="fw-bold mb-1">' + card.title + '</h6>' +
-        '<p class="text-muted small mb-1">' + card.text + '</p>' +
-        '<p class="fw-bold mb-0">₱' + card.price + '</p>' +
-        '</div>' +
-        '</div>';
+    const cardHtml = `
+        <div class="card border-0 shadow-sm h-100 rounded">
+            <img src="${card.img}" class="card-img-top" alt="${card.title}" style="height: 350px; object-fit: cover;">
+            <div class="card-body px-0 mx-2">
+                <h6 class="fw-bold mb-1">${card.title}</h6>
+                <p class="text-muted small mb-1">${card.text}</p>
+                <p class="fw-bold mb-0">₱${card.price}</p>
+            </div>
+        </div>
+    `;
 
     col.innerHTML = cardHtml;
-    cardsContainer.appendChild(col);
-});
+    return col;
+}
+
+if (cardsContainer) {
+    cardsData.forEach(card => {
+        const cardElement = createCardElement(card);
+        cardsContainer.appendChild(cardElement);
+    });
+}
